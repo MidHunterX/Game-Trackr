@@ -34,6 +34,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 <a href="https://midhunterx.github.io/Played-Games-List/"><img width="230" src="https://img.shields.io/badge/-Preview Webpage-1DB954?style=for-the-badge"/></a>
 
+# Angular Notes
+- Components - Reusable Code Snippets
+- Interface - Typescript type declaration
+
 # Played Games Tracker v1.0
 
 The main purpose of this beginner project is to familiarize :
