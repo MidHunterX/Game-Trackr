@@ -1,5 +1,9 @@
-<article *ngFor="let game of games">
-  <img loading="lazy" width="512px" [src]="'public/img/' + game.img + '.jpg'" alt="{{ game.game }}">
-  <h2>{{ game.game }}</h2>
-  <p>Released: {{ game.year }}</p>
-</article>
+<section id="game" class="card-container">
+  <article *ngFor="let game of games" class="card">
+    <img class="card-image" loading="lazy" width="512px" [src]="'public/img/' + game.img + '.jpg'" alt="{{ game.game }}">
+    <div class="card-content">
+      <h2>{{ game.game }}</h2>
+      <p>{{ game.year }}</p>
+    </div>
+  </article>
+</section>
