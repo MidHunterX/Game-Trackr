@@ -1,16 +1,38 @@
 ![](assets/head.png)
 
-# Game Completion Tracker v2.0
+# Game Completion Tracker
 
 ## 🚀 Quickstart
 
-Start Server:
+Step 1: Clone the project and cd into it
+
+Using **HTTPS**:
+
+```bash
+git clone https://github.com/MidHunterX/Game-Completion-Tracker.git
+cd Game-Completion-Tracker
+```
+
+Using **SSH** (Personal):
+
+```bash
+git clone git@github.com:MidHunterX/Game-Completion-Tracker.git
+cd Game-Completion-Tracker
+```
+
+Step 2: Start Server (Make sure to have ng tool installed)
 
 ```bash
 ng serve
 ```
 
-Navigate to `http://localhost:4200/`
+Step 3: Navigate to development url
+
+```
+http://localhost:4200/
+```
+
+Step 4: Profit?
 
 ## 💽 Technologies Used
 
