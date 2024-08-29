@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { GameInterface } from '../game.interface';
-import {CommonModule} from '@angular/common'; // *ngFor
+import { CommonModule } from '@angular/common'; // *ngFor
+import { GameInterface } from './game.interface';
 
 @Component({
   selector: 'app-game',
@@ -10,14 +10,13 @@ import {CommonModule} from '@angular/common'; // *ngFor
   styleUrl: './game.component.scss',
 })
 export class GameComponent implements OnInit {
-
   games: GameInterface[] = [];
   ngOnInit(): void {
     fetch('public/data.json')
-      .then(response => response.json())
+      .then((response) => response.json())
       .then((data: GameInterface[]) => {
         this.games = data;
       })
-      .catch(error => console.error('Error loading GameData:', error));
+      .catch((error) => console.error('Error loading GameData:', error));
   }
 }
