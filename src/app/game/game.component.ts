@@ -1,12 +1,5 @@
 import { Component } from '@angular/core';
-
-// {"id":"146","year":"2010","img":"BS2","game":"BioShock 2"},
-export interface Gamedetails {
-  id: number;
-  year: number;
-  img: string;
-  game: string;
-}
+import { GameInterface } from '../game.interface';
 
 @Component({
   selector: 'app-game',
@@ -16,7 +9,7 @@ export interface Gamedetails {
   styleUrl: './game.component.scss',
 })
 export class GameComponent {
-  gamedetails: Gamedetails = {
+  gamedetails: GameInterface = {
     id: 146,
     year: 2010,
     img: 'BS2',
