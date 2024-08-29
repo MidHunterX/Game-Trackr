@@ -1,5 +1,3 @@
-![](assets/head.png)
-
 # Game Completion Tracker
 
 ## 🚀 Quickstart
