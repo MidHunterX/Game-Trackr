@@ -1,9 +1,27 @@
-<section id="gameCards" class="card-container">
-  <article *ngFor="let game of games" class="card">
-    <img class="card-image" loading="lazy" width="512px" [src]="'public/img/' + game.img + '.jpg'" alt="{{ game.game }}">
-    <div class="card-content">
-      <h2>{{ game.game }}</h2>
-      <p>{{ game.year }}</p>
-    </div>
-  </article>
+<!-- Recently Played Section -->
+<section id="recentlyPlayed">
+  <h2>Recently Played</h2>
+  <div class="card-container">
+    <article *ngFor="let game of recentlyPlayed" class="card">
+      <img class="card-image" loading="lazy" width="512px" [src]="'public/img/' + game.img + '.jpg'" alt="{{ game.game }}">
+      <div class="card-content">
+        <h2>{{ game.game }}</h2>
+        <p>{{ game.year }}</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- All Games Section -->
+<section id="gameCards">
+  <h2>All Games</h2>
+  <div class="card-container">
+    <article *ngFor="let game of remainingGames" class="card">
+      <img class="card-image" loading="lazy" width="512px" [src]="'public/img/' + game.img + '.jpg'" alt="{{ game.game }}">
+      <div class="card-content">
+        <h2>{{ game.game }}</h2>
+        <p>{{ game.year }}</p>
+      </div>
+    </article>
+  </div>
 </section>
