@@ -39,3 +39,56 @@ Step 4: Profit?
 - Angular 18: Web Application Framework
 - HTML5: Frontend Markup Language
 - SASS: Better styling DX
+
+# Angular 18 Notes
+
+Having favicon and a Public Directory:
+
+```json
+/* angular.json */
+{
+  "projects": {
+    "Project-Name": {
+      "architect": {
+        "build": {
+          "options": {
+            "assets": [
+              "src/favicon.ico",
+              {
+                "glob": "**/*",
+                "input": "public",
+                "output": "public" /* add this */
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+Fetching JSON:
+
+```json
+/* tsconfig.json */
+{
+  "compilerOptions": {
+    "resolveJsonModule": true
+  }
+}
+```
+
+Using for loop:
+
+```js
+// component.ts
+import { CommonModule } from "@angular/common";
+```
+
+```html
+<!-- component.html -->
+<tag *ngFor="let item of items">
+  <text>{{ item.name }}</text>
+</tag>
+```
