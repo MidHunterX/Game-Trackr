@@ -1,6 +1,7 @@
 <main>
   <h1>Played Games</h1>
-  <gameCards></gameCards>
+  <app-recently-played [recentlyPlayed]="recentlyPlayed"></app-recently-played>
+  <app-game-cards [remainingGames]="remainingGames"></app-game-cards>
 </main>
 
 <router-outlet />
