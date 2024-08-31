@@ -1,8 +1,8 @@
+import { Router } from '@angular/router';
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common'; // *ngFor
-import { GameItemInterface } from '../gameItem.interface';
-import { Router } from '@angular/router';
-import { GameDataService } from '../game-data.service';
+import { GameItemInterface } from '../../gameItem.interface';
+import { GameDataService } from '../../game-data.service';
 
 @Component({
   selector: 'app-game-cards', // HTML Tag Name
