@@ -1,0 +1,11 @@
+<section id="gameDetails">
+  <p>Route Works!</p>
+  <div *ngIf="game">
+    <h1>{{ game.game }}</h1>
+    <img [src]="'public/img/' + game.img + '.jpg'" alt="{{ game.game }}" />
+    <p>Year: {{ game.year }}</p>
+  </div>
+  <div *ngIf="!game">
+    <p>Loading game details...</p>
+  </div>
+</section>
