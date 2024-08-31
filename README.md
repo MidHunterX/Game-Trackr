@@ -92,3 +92,8 @@ import { CommonModule } from "@angular/common";
   <text>{{ item.name }}</text>
 </tag>
 ```
+
+| Angular Stuff      | Description                  |
+| ------------------ | ---------------------------- |
+| app.component.html | Similar to Django {{ base }} |
+| Interface          | TS Type Declaration          |
