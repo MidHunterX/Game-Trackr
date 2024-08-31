@@ -36,9 +36,12 @@ Step 4: Profit?
 
 ## 💽 Technologies Used
 
-- Angular 18: Web Application Framework
-- HTML5: Frontend Markup Language
-- SASS: Better styling DX
+| Technology  | Description               |
+| ----------- | ------------------------- |
+| Angular 18  | Web Application Framework |
+| HTML5       | Frontend Markup Language  |
+| SASS        | Better styling DX         |
+| TailwindCSS | CSS Framework             |
 
 # Angular 18 Notes
 
