@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { GameItemInterface } from '../gameItem.interface';
+import { GameItemInterface } from '../../gameItem.interface';
 
 @Component({
   selector: 'app-recently-played',
