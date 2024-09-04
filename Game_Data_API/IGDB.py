@@ -1,5 +1,5 @@
 import os
-from requests import post
+import requests
 from dotenv import load_dotenv
 
 load_dotenv()  # take environment variables from .env.
@@ -15,44 +15,44 @@ ACCESS_TOKEN = os.getenv("ACCESS_TOKEN")  # Lasts only for an Hour
 # print("RESPONSE: %s" % str(response.json()))
 
 
+def get_field_names(game, field):
+    return ", ".join(item.get("name", "N/A") for item in game.get(field, []))
+
+
+def get_first_field(game, field, key):
+    return game.get(field, [{}])[0].get(key, "N/A")
+
+
 # FETCHING IGDB GAME DATA (WITH ACCESS TOKEN)
 def fetch_game_details(title):
-    igdb_url = 'https://api.igdb.com/v4/games'
-    igdb_headers = { 'Client-ID': TWITCH_CLIENT_ID, 'Authorization': f'Bearer {ACCESS_TOKEN}' }
-    igdb_body = f"fields name,genres.name,themes.name,websites.url,game_engines.name,game_modes.name,platforms.name,player_perspectives.name; where name=\"{title}\"; limit 1;"
+    igdb_url = "https://api.igdb.com/v4/games"
+    headers = {"Client-ID": TWITCH_CLIENT_ID, "Authorization": f"Bearer {ACCESS_TOKEN}"}
+    body = f"""
+    fields name, summary, genres.name, themes.name, websites.url,
+    game_engines.name, game_modes.name, platforms.name,
+    player_perspectives.name; where name = "{title}"; limit 1;
+    """
 
-    response = post(igdb_url, headers=igdb_headers, data=igdb_body)
-    # print("RESPONSE: %s" % str(response.json()))
+    response = requests.post(igdb_url, headers=headers, data=body)
 
     if response.status_code == 200:
-        igdb_data = response.json()
-        if igdb_data:
-            game = igdb_data[0]
-            game_name = game.get('name', 'N/A')
-            genres = ', '.join([g.get('name', 'N/A') for g in game.get('genres', [{'name': 'N/A'}])])
-            themes = ', '.join([t.get('name', 'N/A') for t in game.get('themes', [{'name': 'N/A'}])])
-            company_website = game.get('websites', [{'url': 'N/A'}])[0]['url']
-            game_engine = ', '.join([ge.get('name', 'N/A') for ge in game.get('game_engines', [{'name': 'N/A'}])])
-            game_modes = ', '.join([gm.get('name', 'N/A') for gm in game.get('game_modes', [{'name': 'N/A'}])])
-            platforms = ', '.join([pl.get('name', 'N/A') for pl in game.get('platforms', [{'name': 'N/A'}])])
-            player_perspectives = ', '.join([pp.get('name', 'N/A') for pp in game.get('player_perspectives', [{'name': 'N/A'}])])
-            return [game_name, genres, themes, company_website, game_engine, game_modes, platforms, player_perspectives]
-        else:
-            return [title, 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A']  # BATMAN!!!
+        game = response.json()[0] if response.json() else {}
+        return [
+            game.get("name", "N/A"),
+            game.get("summary", "N/A"),
+            get_field_names(game, "genres"),
+            get_field_names(game, "themes"),
+            get_first_field(game, "websites", "url"),
+            get_field_names(game, "game_engines"),
+            get_field_names(game, "game_modes"),
+            get_field_names(game, "platforms"),
+            get_field_names(game, "player_perspectives"),
+        ]
     else:
-        print(f'IGDB request for {title} failed with status code {response.status_code}')
+        print(f"Request for {title} failed. Status: {response.status_code}")
         print("Looks like it's time to regenerate your ACCESS_TOKEN")
+        return [title, "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A"]  # BATMAN!!!
 
 
 game_details = fetch_game_details("The Witcher 2: Assassins of Kings")
 print(game_details)
-
-# fetch_game_details("The Witcher 2: Assassins of Kings")
-# [0] 'The Witcher 2: Assassins of Kings',
-# [1] 'Role-playing (RPG), Adventure',
-# [2] 'Action, Fantasy',
-# [3] 'http://thewitcher.com/witcher2/',
-# [4] 'Havok Physics, REDengine, SpeedTree',
-# [5] 'Single player',
-# [6] 'Linux, PC (Microsoft Windows), Xbox 360, Mac',
-# [7] 'Third person'
