@@ -28,7 +28,7 @@ def fetch_game_details(title):
     igdb_url = "https://api.igdb.com/v4/games"
     headers = {"Client-ID": TWITCH_CLIENT_ID, "Authorization": f"Bearer {ACCESS_TOKEN}"}
     body = f"""
-    fields name, summary, cover.url, genres.name, themes.name, websites.url,
+    fields name, summary, rating, cover.url, genres.name, themes.name, keywords.name, websites.url,
     game_engines.name, game_modes.name, platforms.name,
     player_perspectives.name; where name = "{title}"; limit 1;
     """
@@ -40,9 +40,11 @@ def fetch_game_details(title):
         return [
             game.get("name", "N/A"),
             game.get("summary", "N/A"),
-            game.get("cover", {}).get('url', 'N/A'),
+            game.get("cover", {}).get("url", "N/A"),
+            round(game.get("rating", "N/A"), 1),  # round to 1 decimal
             get_field_names(game, "genres"),
             get_field_names(game, "themes"),
+            get_field_names(game, "keywords"),
             get_first_field(game, "websites", "url"),
             get_field_names(game, "game_engines"),
             get_field_names(game, "game_modes"),
@@ -52,7 +54,20 @@ def fetch_game_details(title):
     else:
         print(f"Request for {title} failed. Status: {response.status_code}")
         print("Looks like it's time to regenerate your ACCESS_TOKEN")
-        return [title, "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A"]  # BATMAN!!!
+        return [
+            title,
+            "N/A",
+            "N/A",
+            "N/A",
+            "N/A",
+            "N/A",
+            "N/A",
+            "N/A",
+            "N/A",
+            "N/A",
+            "N/A",
+            "N/A",
+        ]  # BATMAN!!!
 
 
 game_details = fetch_game_details("The Witcher 2: Assassins of Kings")
