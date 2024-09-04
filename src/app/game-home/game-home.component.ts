@@ -16,7 +16,7 @@ export class GameHomeComponent implements OnInit {
   remainingGames: GameItemInterface[] = [];
 
   ngOnInit(): void {
-    fetch('public/data.json')
+    fetch('public/games.json')
       .then((response) => response.json())
       .then((data: GameItemInterface[]) => {
         this.games = data;

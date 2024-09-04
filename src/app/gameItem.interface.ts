@@ -1,7 +1,11 @@
-// {"id":"146","year":"2010","img":"BS2","game":"BioShock 2"},
 export interface GameItemInterface {
   id: number;
+  name: string;
   year: number;
+  developer: string;
+  description: string;
+  genre: string[];
+  themes: string[];
   img: string;
-  game: string;
+  rating: number;
 }
