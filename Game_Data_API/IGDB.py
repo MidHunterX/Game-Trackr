@@ -28,7 +28,7 @@ def fetch_game_details(title):
     igdb_url = "https://api.igdb.com/v4/games"
     headers = {"Client-ID": TWITCH_CLIENT_ID, "Authorization": f"Bearer {ACCESS_TOKEN}"}
     body = f"""
-    fields name, summary, genres.name, themes.name, websites.url,
+    fields name, summary, cover.url, genres.name, themes.name, websites.url,
     game_engines.name, game_modes.name, platforms.name,
     player_perspectives.name; where name = "{title}"; limit 1;
     """
@@ -40,6 +40,7 @@ def fetch_game_details(title):
         return [
             game.get("name", "N/A"),
             game.get("summary", "N/A"),
+            game.get("cover", {}).get('url', 'N/A'),
             get_field_names(game, "genres"),
             get_field_names(game, "themes"),
             get_first_field(game, "websites", "url"),
