@@ -23,13 +23,26 @@ def get_first_field(game, field, key):
     return game.get(field, [{}])[0].get(key, "N/A")
 
 
+def get_first_developer_company(game):
+    companies = game.get("involved_companies", [])
+
+    # [{'id':xxxxx, 'company': {'id': xxx, 'name': 'xxxxxxxxxxxxxx'}, 'developer': True}]
+    if not isinstance(companies, list):
+        return "N/A"
+    for company_info in companies:
+        if company_info.get("developer"):
+            return company_info["company"].get("name", "N/A")
+    return "N/A"
+
+
 # FETCHING IGDB GAME DATA (WITH ACCESS TOKEN)
 def fetch_game_details(title):
     igdb_url = "https://api.igdb.com/v4/games"
     headers = {"Client-ID": TWITCH_CLIENT_ID, "Authorization": f"Bearer {ACCESS_TOKEN}"}
     body = f"""
-    fields name, summary, rating, cover.url, genres.name, themes.name, keywords.name, websites.url,
-    game_engines.name, game_modes.name, platforms.name,
+    fields name, involved_companies.company.name, involved_companies.developer,
+    summary, rating, cover.url, genres.name, themes.name, keywords.name,
+    websites.url, game_engines.name, game_modes.name, platforms.name,
     player_perspectives.name; where name = "{title}"; limit 1;
     """
 
@@ -39,6 +52,7 @@ def fetch_game_details(title):
         game = response.json()[0] if response.json() else {}
         return [
             game.get("name", "N/A"),
+            get_first_developer_company(game),
             game.get("summary", "N/A"),
             game.get("cover", {}).get("url", "N/A"),
             round(game.get("rating", "N/A"), 1),  # round to 1 decimal
