@@ -1,9 +1,14 @@
 <section id="gameDetails">
-  <p>Route Works!</p>
   <div *ngIf="game">
-    <h1>{{ game.game }}</h1>
-    <img [src]="'public/img/' + game.img + '.jpg'" alt="{{ game.game }}" />
+    <h1>{{ game.name }}</h1>
+    <p>ID: {{ game.id }}</p>
+    <img [src]="'public/banner/' + game.img + '.jpg'" alt="{{ game.name }}" />
     <p>Year: {{ game.year }}</p>
+    <p>Developer: {{ game.developer }}</p>
+    <p>Genre: <span *ngFor="let genre of game.genre">{{ genre }} |&nbsp;</span></p>
+    <p>Themes: <span *ngFor="let theme of game.themes">{{ theme }} |&nbsp;</span></p>
+    <p>Description: {{ game.description }}</p>
+    <p>Rating: {{ game.rating }}</p>
   </div>
   <div *ngIf="!game">
     <p>Loading game details...</p>

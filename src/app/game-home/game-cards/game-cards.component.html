@@ -1,10 +1,21 @@
 <section id="gameCards">
-  <h2>All Games</h2>
-  <div class="card-container">
-    <article *ngFor="let game of remainingGames" class="card" (click)="viewDetails(game)">
-      <img class="card-image" loading="lazy" width="512px" [src]="'public/img/' + game.img + '.jpg'" alt="{{ game.game }}">
-      <div class="card-content">
-        <h2>{{ game.game }}</h2>
+  <h1>All Games</h1>
+  <div
+    class="w-fit mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+  >
+    <article
+      *ngFor="let game of remainingGames"
+      class="w-fit relative"
+      (click)="viewDetails(game)"
+    >
+      <img
+        class="h-auto"
+        loading="lazy"
+        [src]="'public/banner/' + game.img + '.jpg'"
+        alt="{{ game.name }}"
+      />
+      <div class="absolute ps-3 bottom-0">
+        <h2>{{ game.name }}</h2>
         <p>{{ game.year }}</p>
       </div>
     </article>
