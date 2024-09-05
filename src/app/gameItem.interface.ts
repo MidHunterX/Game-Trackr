@@ -4,8 +4,14 @@ export interface GameItemInterface {
   year: number;
   developer: string;
   description: string;
-  genre: string[];
+  website: string;
+  game_engines: string[];
+  played_modes: string[];
+  platforms: string[];
+  pov: string[];
+  genres: string[];
   themes: string[];
+  keywords: string[];
   img: string;
   rating: number;
 }

@@ -1,7 +1,7 @@
 <section id="gameCards">
   <h1>All Games</h1>
   <div
-    class="w-fit mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+    class="w-fit mx-auto grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8"
   >
     <article
       *ngFor="let game of remainingGames"
@@ -9,15 +9,11 @@
       (click)="viewDetails(game)"
     >
       <img
-        class="h-auto"
+        class="h-72 w-56 object-cover rounded-xl"
         loading="lazy"
-        [src]="'public/banner/' + game.img + '.jpg'"
+        [src]="'public/cover/' + game.img + '.jpg'"
         alt="{{ game.name }}"
       />
-      <div class="absolute ps-3 bottom-0">
-        <h2>{{ game.name }}</h2>
-        <p>{{ game.year }}</p>
-      </div>
     </article>
   </div>
 </section>
