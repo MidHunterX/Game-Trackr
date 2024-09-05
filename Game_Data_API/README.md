@@ -21,3 +21,24 @@ python IGDB.py
 Step 5: That's it! You now got your **ACCESS_TOKEN** which you can put in you .env file
 
 For more details, refer [IGDB API Docs](https://api-docs.igdb.com/)
+
+## Data Structure
+
+```py
+game_details = {
+    "name": String,
+    "release_year": Int,
+    "developer": String,
+    "description": String,
+    "website": String,
+    "game_engines": List,
+    "player_modes": List,
+    "platforms": List,
+    "pov": List,
+    "genres": List,
+    "themes": List,
+    "keywords": List,
+    "img": String,
+    "rating": Float,
+}
+```
