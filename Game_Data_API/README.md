@@ -46,3 +46,7 @@ game_details = {
     "rating": Float,
 }
 ```
+
+## Note
+
+- logos are available at steamgriddb
