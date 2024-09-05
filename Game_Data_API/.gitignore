@@ -1,4 +1,4 @@
-covers/
+cover/
 venv/
 .env
 __pycache__

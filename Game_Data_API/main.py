@@ -48,31 +48,33 @@ def main():
     else:
         exit(0)
 
+    img = input(str("Enter cover image filename: "))
+
     game_details = {
         "name": name,
         "release_year": release_year,
         "developer": developer,
         "description": description,
-        "rating": rating,
-        "genres": genres,
-        "themes": themes,
-        "keywords": keywords,
         "website": website,
         "game_engines": engines,
         "player_modes": modes,
         "platforms": platforms,
         "pov": povs,
+        "genres": genres,
+        "themes": themes,
+        "keywords": keywords,
+        "img": img,
+        "rating": rating,
     }
     game_json = json.dumps(game_details, indent=2).replace("\\n", "")
     print(game_json)
 
-    img = input(str("Enter cover image filename: "))
     download_cover_image(cv, img)
 
 
-def download_cover_image(hash, file_name="cover"):
+def download_cover_image(hash, file_name):
     import os
-    dir_path = "covers"
+    dir_path = "cover"
     if not os.path.exists(dir_path):
         os.mkdir(dir_path)
 
