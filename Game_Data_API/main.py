@@ -1,3 +1,4 @@
+import os
 import json
 import requests
 from IGDB import fetch_game_details
@@ -24,6 +25,10 @@ def main():
         povs,
     ) = game_details
 
+    # IF NOTHING
+    if name == "":
+        exit(0)
+
     img = input(str("Enter cover image filename: "))
 
     game_details = {
@@ -45,17 +50,13 @@ def main():
 
     game_json = json.dumps(game_details, indent=2)
     print(game_json)
-
     download_cover_image(cover, img)
 
 
 def download_cover_image(hash, file_name):
-    import os
-
     dir_path = "cover"
     if not os.path.exists(dir_path):
         os.mkdir(dir_path)
-
     # Doc: https://api-docs.igdb.com/#images
     cover_size = "cover_big"  # 264 x 374
     if hash != "N/A":
@@ -67,7 +68,6 @@ def download_cover_image(hash, file_name):
             response.raise_for_status()
             with open(f"{dir_path}/{file_name}.jpg", "wb") as file:
                 file.write(response.content)
-
         except requests.RequestException as e:
             print(f"Failed to download cover image: {e}")
     else:
