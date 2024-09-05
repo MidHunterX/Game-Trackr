@@ -46,8 +46,9 @@ def fetch_game_details(title):
     fields name, involved_companies.company.name, involved_companies.developer,
     summary, rating, cover.url, genres.name, themes.name, keywords.name,
     websites.url, game_engines.name, game_modes.name, platforms.name,
-    player_perspectives.name; where name = "{title}"; limit 1;
+    player_perspectives.name; search "{title}"; limit 1;
     """
+    # player_perspectives.name; where name = "{title}"; limit 1;
 
     response = requests.post(igdb_url, headers=headers, data=body)
 
