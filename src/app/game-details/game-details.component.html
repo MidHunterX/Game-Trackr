@@ -1,14 +1,39 @@
 <section id="gameDetails">
   <div *ngIf="game">
-    <h1>{{ game.name }}</h1>
-    <p>ID: {{ game.id }}</p>
     <img [src]="'public/banner/' + game.img + '.jpg'" alt="{{ game.name }}" />
+    <p>ID: {{ game.id }}</p>
+    <h1>{{ game.name }}</h1>
     <p>Year: {{ game.year }}</p>
-    <p>Developer: {{ game.developer }}</p>
-    <p>Genre: <span *ngFor="let genre of game.genre">{{ genre }} |&nbsp;</span></p>
-    <p>Themes: <span *ngFor="let theme of game.themes">{{ theme }} |&nbsp;</span></p>
-    <p>Description: {{ game.description }}</p>
-    <p>Rating: {{ game.rating }}</p>
+    <p *ngIf="game.developer">Developer: {{ game.developer }}</p>
+    <p *ngIf="game.genres && game.genres.length > 0">
+      Genre:
+      <span *ngFor="let genre of game.genres">{{ genre }} |&nbsp;</span>
+    </p>
+    <p *ngIf="game.themes && game.themes.length > 0">
+      Themes:
+      <span *ngFor="let theme of game.themes">{{ theme }} |&nbsp;</span>
+    </p>
+    <p *ngIf="game.description">Description: {{ game.description }}</p>
+    <p *ngIf="game.website">Website: {{ game.website }}</p>
+    <p *ngIf="game.game_engines && game.game_engines.length > 0">
+      Engine:
+      <span *ngFor="let engine of game.game_engines">{{ engine }} |&nbsp;</span>
+    </p>
+    <p *ngIf="game.platforms && game.platforms.length > 0">
+      Platforms:
+      <span *ngFor="let platform of game.platforms"
+        >{{ platform }} |&nbsp;</span
+      >
+    </p>
+    <p *ngIf="game.pov && game.pov.length > 0">
+      Point of View:
+      <span *ngFor="let view of game.pov">{{ view }} |&nbsp;</span>
+    </p>
+    <p *ngIf="game.rating">Rating: {{ game.rating }}</p>
+    <p *ngIf="game.keywords && game.keywords.length > 0">
+      Tags:
+      <span *ngFor="let keyword of game.keywords">{{ keyword }} |&nbsp;</span>
+    </p>
   </div>
   <div *ngIf="!game">
     <p>Loading game details...</p>

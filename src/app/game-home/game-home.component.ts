@@ -21,7 +21,8 @@ export class GameHomeComponent implements OnInit {
       .then((data: GameItemInterface[]) => {
         this.games = data;
         this.recentlyPlayed = this.games.slice(0, 2);
-        this.remainingGames = this.games.slice(2);
+        // this.remainingGames = this.games.slice(2);
+        this.remainingGames = this.games;
       })
       .catch((error) => console.error('Error loading GameData:', error));
   }
