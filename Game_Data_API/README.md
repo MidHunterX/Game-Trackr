@@ -15,7 +15,7 @@ ACCESS_TOKEN=""
 Step 4: Run Python Script with
 
 ```bash
-python IGDB.py
+python main.py
 ```
 
 Step 5: That's it! You now got your **ACCESS_TOKEN** which you can put in you .env file
