@@ -74,6 +74,7 @@ def main():
 
 def download_cover_image(hash, file_name):
     import os
+
     dir_path = "cover"
     if not os.path.exists(dir_path):
         os.mkdir(dir_path)
