@@ -52,9 +52,10 @@ def format_year(unix_timestamp):
 
 # DOUBLE TO 1 DECIMAL FLOAT
 def format_rating(rating):
-    if isinstance(rating, int):
+    try:
+        rating = int(rating)
         rating = round(rating, 1)  # Round to 1 decimal
-    else:
+    except:
         rating = 0
     return rating
 
@@ -65,7 +66,7 @@ def format_game(game):
     dev = get_first_developer_company(game)
     dc = game.get("summary", "")
     cr = game.get("cover", {}).get("image_id", "")
-    rt = game.get("rating", "")
+    rt = format_rating(game.get("rating", ""))
     gnr = get_field_names(game, "genres")
     thm = get_field_names(game, "themes")
     key = get_field_names(game, "keywords")
@@ -130,10 +131,14 @@ def fetch_game_details(title):
 
             # READ USER SELECTION
             selected_game = len(games) + 1
-            selected_game = int(input("\nSelect a game: "))
-            while selected_game > len(games):
-                print("umm... That's not even in the list")
-                selected_game = int(input("Select a game: "))
+            try:
+                selected_game = int(input("\nSelect a game: "))
+                while selected_game > len(games):
+                    print("umm... That's not even in the list")
+                    selected_game = int(input("Select a game: "))
+            except:
+                print("Looks like what you are looking for is not here, bye")
+                exit(0)
 
             # RETURN SELECTED DATA
             game = response.json()[selected_game - 1] if response.json() else {}
@@ -143,9 +148,3 @@ def fetch_game_details(title):
         print(f"Request for {title} failed. Status: {response.status_code}")
         print("Looks like it's time to regenerate your ACCESS_TOKEN")
         return [title, "", "", "", "", "", "", "", "", "", "", "", "", ""]
-
-
-# PLAYGROUND
-game = input(str("Enter Name of the Game: "))
-game_details = fetch_game_details(game)
-print(game_details)
