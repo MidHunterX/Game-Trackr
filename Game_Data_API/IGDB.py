@@ -44,7 +44,7 @@ def fetch_game_details(title):
     headers = {"Client-ID": TWITCH_CLIENT_ID, "Authorization": f"Bearer {ACCESS_TOKEN}"}
     body = f"""
     fields name, involved_companies.company.name, involved_companies.developer,
-    summary, rating, cover.url, genres.name, themes.name, keywords.name,
+    summary, rating, cover.image_id, genres.name, themes.name, keywords.name,
     websites.url, game_engines.name, game_modes.name, platforms.name,
     player_perspectives.name; search "{title}"; limit 1;
     """
@@ -62,8 +62,8 @@ def fetch_game_details(title):
             game.get("name", "N/A"),
             get_first_developer_company(game),
             game.get("summary", "N/A"),
-            game.get("cover", {}).get("url", "N/A"),
-            round(game.get("rating", "N/A"), 1),  # round to 1 decimal
+            game.get("cover", {}).get("image_id", "N/A"),
+            game.get("rating", "N/A"),
             get_field_names(game, "genres"),
             get_field_names(game, "themes"),
             get_field_names(game, "keywords"),
