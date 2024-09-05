@@ -16,6 +16,6 @@ Step 4: Run Python Script with
 python IGDB.py
 ```
 
-Step 5: That's it! You now got your **ACCESS_TOKEN** which will last only for an hour
+Step 5: That's it! You now got your **ACCESS_TOKEN** which you can put in you .env file
 
 For more details, refer [IGDB API Docs](https://api-docs.igdb.com/)
