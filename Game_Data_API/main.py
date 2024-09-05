@@ -1,6 +1,7 @@
 import json
 import requests
 from IGDB import fetch_game_details
+from datetime import datetime
 
 
 def main():
@@ -11,6 +12,7 @@ def main():
     game_details = fetch_game_details(game)
     (
         name,
+        release_date,
         developer,
         description,
         cv,
@@ -24,14 +26,22 @@ def main():
         platforms,
         povs,
     ) = game_details
+
+    # DOUBLE TO 1 DECIMAL FLOAT
     if isinstance(rating, int):
         rating = round(rating, 1)  # Round to 1 decimal
     else:
         rating = 0
 
-    mini_details = {"name": name, "developer": developer}
-    print(mini_details)
+    # UNIX TIMESTAMP TO UTC ISO
+    release_year = 0
+    if release_date != "" and release_date != "N/A":
+        release_year = datetime.fromtimestamp(int(release_date)).strftime("%Y")
+        # .strftime('%Y-%m-%d %H:%M:%S'))
 
+    # GET CONFIRMATION
+    mini_details = {"name": name, "release_year": release_year, "developer": developer}
+    print(mini_details)
     proceed = input(str("Proceed? (Y/n): ")).lower()
     if proceed == "y" or proceed == "":
         pass
@@ -40,6 +50,7 @@ def main():
 
     game_details = {
         "name": name,
+        "release_year": release_year,
         "developer": developer,
         "description": description,
         "rating": rating,

@@ -43,10 +43,11 @@ def fetch_game_details(title):
     igdb_url = "https://api.igdb.com/v4/games"
     headers = {"Client-ID": TWITCH_CLIENT_ID, "Authorization": f"Bearer {ACCESS_TOKEN}"}
     body = f"""
-    fields name, involved_companies.company.name, involved_companies.developer,
-    summary, rating, cover.image_id, genres.name, themes.name, keywords.name,
-    websites.url, game_engines.name, game_modes.name, platforms.name,
-    player_perspectives.name; search "{title}"; limit 1;
+    fields name, first_release_date, involved_companies.company.name,
+    involved_companies.developer, summary, rating, cover.image_id, genres.name,
+    themes.name, keywords.name, websites.url, game_engines.name,
+    game_modes.name, platforms.name, player_perspectives.name; search
+    "{title}"; limit 1;
     """
     # player_perspectives.name; where name = "{title}"; limit 1;
 
@@ -54,12 +55,13 @@ def fetch_game_details(title):
 
     if response.json() == []:
         print("Couldn't find the game")
-        return [title, "", "", "", "", "", "", "", "", "", "", "", ""]
+        return [title, "", "", "", "", "", "", "", "", "", "", "", "", ""]
 
     if response.status_code == 200:
         game = response.json()[0] if response.json() else {}
         return [
             game.get("name", "N/A"),
+            game.get("first_release_date", "N/A"),
             get_first_developer_company(game),
             game.get("summary", "N/A"),
             game.get("cover", {}).get("image_id", "N/A"),
@@ -76,4 +78,4 @@ def fetch_game_details(title):
     else:
         print(f"Request for {title} failed. Status: {response.status_code}")
         print("Looks like it's time to regenerate your ACCESS_TOKEN")
-        return [title, "", "", "", "", "", "", "", "", "", "", "", ""]
+        return [title, "", "", "", "", "", "", "", "", "", "", "", "", ""]
