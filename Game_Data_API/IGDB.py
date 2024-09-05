@@ -97,7 +97,7 @@ def fetch_game_details(title):
 
     if games == []:
         print("Couldn't find the game")
-        return [title, "", "", "", "", "", "", "", "", "", "", "", "", ""]
+        return ["", "", "", "", "", "", "", "", "", "", "", "", "", ""]
 
     if response.status_code == 200:
         # GET RESPONSE
@@ -137,8 +137,8 @@ def fetch_game_details(title):
                     print("umm... That's not even in the list")
                     selected_game = int(input("Select a game: "))
             except:
-                print("Looks like what you are looking for is not here, bye")
-                exit(0)
+                print("Looks like what you are looking for is not here")
+                return ["", "", "", "", "", "", "", "", "", "", "", "", "", ""]
 
             # RETURN SELECTED DATA
             game = response.json()[selected_game - 1] if response.json() else {}
@@ -147,4 +147,4 @@ def fetch_game_details(title):
     else:
         print(f"Request for {title} failed. Status: {response.status_code}")
         print("Looks like it's time to regenerate your ACCESS_TOKEN")
-        return [title, "", "", "", "", "", "", "", "", "", "", "", "", ""]
+        return ["", "", "", "", "", "", "", "", "", "", "", "", "", ""]
