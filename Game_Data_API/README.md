@@ -1,5 +1,7 @@
 # GAME DATA API
 
+## 🚀 Quickstart
+
 Step 1: Register an **Application** on [Twitch Developers Page](https://dev.twitch.tv/console)
 
 Step 2: Get **TWITCH_CLIENT_ID** and Generate **TWITCH_CLIENT_SECRET** from your **Application**
@@ -19,6 +21,8 @@ python main.py
 ```
 
 Step 5: That's it! You now got your **ACCESS_TOKEN** which you can put in you .env file
+
+📔 Note: If ACCESS_TOKEN is expired or lost, just clear the value in .env and run script again
 
 For more details, refer [IGDB API Docs](https://api-docs.igdb.com/)
 
