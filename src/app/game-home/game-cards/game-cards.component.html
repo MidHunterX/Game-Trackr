@@ -1,15 +1,15 @@
 <section id="gameCards">
   <h1>All Games</h1>
   <div
-    class="w-fit mx-auto grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8"
+    class="w-fit mx-auto grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
   >
     <article
       *ngFor="let game of remainingGames"
-      class="w-fit relative"
+      class="h-80 w-60 overflow-hidden rounded-xl"
       (click)="viewDetails(game)"
     >
       <img
-        class="h-72 w-56 object-cover rounded-xl"
+        class="object-cover transition hover:scale-110"
         loading="lazy"
         [src]="'public/cover/' + game.img + '.jpg'"
         alt="{{ game.name }}"
