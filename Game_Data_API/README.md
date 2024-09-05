@@ -1,7 +1,9 @@
 # GAME DATA API
 
 Step 1: Register an **Application** on [Twitch Developers Page](https://dev.twitch.tv/console)
+
 Step 2: Get **TWITCH_CLIENT_ID** and Generate **TWITCH_CLIENT_SECRET** from your **Application**
+
 Step 3: Add **.env** file and put both **TWITCH_CLIENT_ID** and **TWITCH_CLIENT_SECRET** in it like
 
 ```bash
