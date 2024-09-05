@@ -71,6 +71,11 @@ def main():
 
 
 def download_cover_image(hash, file_name="cover"):
+    import os
+    dir_path = "covers"
+    if not os.path.exists(dir_path):
+        os.mkdir(dir_path)
+
     # Doc: https://api-docs.igdb.com/#images
     cover_size = "cover_big"  # 264 x 374
     if hash != "N/A":
@@ -80,7 +85,7 @@ def download_cover_image(hash, file_name="cover"):
             # COVER IMAGE
             response = requests.get(url)
             response.raise_for_status()
-            with open(f"{file_name}.jpg", "wb") as file:
+            with open(f"{dir_path}/{file_name}.jpg", "wb") as file:
                 file.write(response.content)
 
         except requests.RequestException as e:
