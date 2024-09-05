@@ -1,21 +1,18 @@
 import json
 import requests
 from IGDB import fetch_game_details
-from datetime import datetime
 
 
 def main():
     game = input(str("Enter Name of the Game: "))
-    if game == "":
-        game = "Assassins Creed Syndicate"
 
     game_details = fetch_game_details(game)
     (
         name,
-        release_date,
+        year,
         developer,
         description,
-        cv,
+        cover,
         rating,
         genres,
         themes,
@@ -27,32 +24,11 @@ def main():
         povs,
     ) = game_details
 
-    # DOUBLE TO 1 DECIMAL FLOAT
-    if isinstance(rating, int):
-        rating = round(rating, 1)  # Round to 1 decimal
-    else:
-        rating = 0
-
-    # UNIX TIMESTAMP TO UTC ISO
-    release_year = 0
-    if release_date != "" and release_date != "N/A":
-        release_year = datetime.fromtimestamp(int(release_date)).strftime("%Y")
-        # .strftime('%Y-%m-%d %H:%M:%S'))
-
-    # GET CONFIRMATION
-    mini_details = {"name": name, "release_year": release_year, "developer": developer}
-    print(mini_details)
-    proceed = input(str("Proceed? (Y/n): ")).lower()
-    if proceed == "y" or proceed == "":
-        pass
-    else:
-        exit(0)
-
     img = input(str("Enter cover image filename: "))
 
     game_details = {
         "name": name,
-        "release_year": release_year,
+        "year": year,
         "developer": developer,
         "description": description,
         "website": website,
@@ -66,10 +42,11 @@ def main():
         "img": img,
         "rating": rating,
     }
-    game_json = json.dumps(game_details, indent=2).replace("\\n", "")
+
+    game_json = json.dumps(game_details, indent=2)
     print(game_json)
 
-    download_cover_image(cv, img)
+    download_cover_image(cover, img)
 
 
 def download_cover_image(hash, file_name):
