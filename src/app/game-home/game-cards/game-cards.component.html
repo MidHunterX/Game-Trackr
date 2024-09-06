@@ -1,15 +1,14 @@
-<section id="gameCards" class="p-2 sm:p-8">
+<section id="gameCards" class="p-2 sm:p-8" class="container mx-auto">
   <h1 class="text-center mb-8">All Games</h1>
-  <div
-    class="w-fit mx-auto grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 md:gap-4 lg:gap-8"
-  >
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 md:gap-4 lg:gap-8">
     <article
       *ngFor="let game of remainingGames"
-      class="cursor-pointer max-h-96 max-w-64 overflow-hidden sm:rounded-xl"
+      class="card relative cursor-pointer overflow-hidden sm:rounded-xl"
       (click)="viewDetails(game)"
     >
+      <p class="absolute text-serial text-gray-300 font-black m-2 z-10">{{ game.id }}</p>
       <img
-        class="object-cover transition duration-300 hover:scale-110"
+        class="transition duration-300 hover:scale-105"
         loading="lazy"
         [src]="'public/cover/' + game.img + '.jpg'"
         alt="{{ game.name }}"
