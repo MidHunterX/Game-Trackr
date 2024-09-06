@@ -71,6 +71,30 @@ Having favicon and a Public Directory:
 }
 ```
 
+Having normal scroll position behaviour (InMemoryScrolling):
+
+```ts
+// app.config.ts
+import { ApplicationConfig, provideZoneChangeDetection } from "@angular/core";
+import { provideRouter, withComponentInputBinding, withInMemoryScrolling } from "@angular/router";
+
+import { routes } from "./app.routes";
+
+export const appConfig: ApplicationConfig = {
+  providers: [
+    provideZoneChangeDetection({ eventCoalescing: true }),
+    provideRouter(
+      routes,
+      withComponentInputBinding(),
+      withInMemoryScrolling({
+        scrollPositionRestoration: "enabled",
+        anchorScrolling: "enabled",
+      }),
+    ),
+  ],
+};
+```
+
 Fetching JSON:
 
 ```json
@@ -84,7 +108,7 @@ Fetching JSON:
 
 Using for loop:
 
-```js
+```ts
 // component.ts
 import { CommonModule } from "@angular/common";
 ```
@@ -95,8 +119,3 @@ import { CommonModule } from "@angular/common";
   <text>{{ item.name }}</text>
 </tag>
 ```
-
-| Angular Stuff      | Description                  |
-| ------------------ | ---------------------------- |
-| app.component.html | Similar to Django {{ base }} |
-| Interface          | TS Type Declaration          |
