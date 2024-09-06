@@ -36,12 +36,13 @@ Step 4: Profit?
 
 ## 💽 Technologies Used
 
-| Technology  | Description               |
-| ----------- | ------------------------- |
-| Angular 18  | Web Application Framework |
-| HTML5       | Frontend Markup Language  |
-| SASS        | Better styling DX         |
-| TailwindCSS | CSS Framework             |
+| Technology  | Description                |
+| ----------- | -------------------------- |
+| Angular 18  | Web Application Framework  |
+| HTML5       | Frontend Markup Language   |
+| SASS        | Better styling DX          |
+| TailwindCSS | CSS Framework              |
+| DaisyUI     | Tailwind Component Library |
 
 # Angular 18 Notes
 

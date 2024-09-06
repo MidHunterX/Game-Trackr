@@ -1,12 +1,6 @@
-/* For using PrimeNG and TailwindCSS together */
-/* solution from PrimeNG Docs does not work */
-/* manually importing css like this does */
-@import "tailwindcss/base.css" layer(tailwindcss);
-@import "tailwindcss/components.css" layer(tailwindcss);
-@import "tailwindcss/utilities.css" layer(tailwindcss);
-
-@import "primeng/resources/themes/lara-light-blue/theme.css";
-@import "primeng/resources/primeng.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* ▀█▀ █░█ █▀▀ █▀▄▀█ █▀▀ █▀ */
 /* ░█░ █▀█ ██▄ █░▀░█ ██▄ ▄█ */
