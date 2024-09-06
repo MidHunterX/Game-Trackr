@@ -1,4 +1,11 @@
-# To update old json data with new IGDB API
+# █▀▀ █▀█ █▄░█ █░█ █▀▀ █▀█ ▀█▀ █▀▀ █▀█
+# █▄▄ █▄█ █░▀█ ▀▄▀ ██▄ █▀▄ ░█░ ██▄ █▀▄
+# Script to convert and add more data to old json data using IGDB API
+# INPUT: [{ "id": Int, "name": String, "year": Int, "img": String }]
+# OUTPUT: [{ "id": Int, "name": String, "year": Int, "developer": String,
+# "description": String, "website": String, "game_engines": List,
+# "player_modes": List, "platforms": List, "pov": List, "genres": List,
+# "themes": List, "keywords": List, "img": String, "rating": Float }]
 
 import json
 from IGDB import fetch_game_details
