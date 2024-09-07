@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { GameItemInterface } from '../gameItem.interface';
 import { GameDataService } from '../game-data.service';
 
@@ -15,7 +15,6 @@ export class GameDetailsComponent implements OnInit {
   game: GameItemInterface | undefined;
 
   constructor(
-    private route: ActivatedRoute, // for route parameters (:id)
     private router: Router,
     private gameDataService: GameDataService,
   ) {}
