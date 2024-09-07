@@ -6,7 +6,7 @@ export interface GameItemInterface {
   description: string;
   website: string;
   game_engines: string[];
-  played_modes: string[];
+  player_modes: string[];
   platforms: string[];
   pov: string[];
   genres: string[];
