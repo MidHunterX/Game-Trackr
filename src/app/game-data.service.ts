@@ -32,4 +32,9 @@ export class GameDataService {
   getSelectedGame(): GameItemInterface | undefined {
     return this.selectedGame;
   }
+
+  // FOR DUMMY TESTING
+  isDevelopment(): boolean {
+    return false;
+  }
 }
