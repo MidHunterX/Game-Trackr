@@ -4,5 +4,6 @@ import { GameDetailsComponent } from './game-details/game-details.component';
 
 export const routes: Routes = [
   { path: '', component: GameHomeComponent },
-  { path: 'game-details/:id', component: GameDetailsComponent },
+  { path: 'game-details', component: GameDetailsComponent },
+  // { path: 'game-details/:id', component: GameDetailsComponent },
 ];
