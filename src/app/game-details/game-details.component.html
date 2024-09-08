@@ -1,4 +1,4 @@
-<section *ngIf="game" class="container mx-auto">
+<section *ngIf="game" class="container mx-auto pb-20">
   <!-- HERO HEADER -->
   <header class="relative">
     <img
@@ -64,7 +64,7 @@
 
   <!-- GAME DETAILS -->
   <section id="game-details" class="px-4 sm:flex">
-    <table id="left-details" class="w-full sm:w-fit flex-shrink-0">
+    <table id="left-details" class="w-full h-fit mb-8 sm:w-fit sm:mb-0 flex-shrink-0">
       <tr *ngIf="game.developer">
         <th>Developer</th>
         <td>{{ game.developer }}</td>
@@ -105,6 +105,15 @@
           </table>
         </td>
       </tr>
+
+      <tr *ngIf="game.platforms && game.platforms.length > 0">
+        <th>Platforms</th>
+        <td>
+          <table *ngFor="let platform of game.platforms">
+            {{ platform }}
+          </table>
+        </td>
+      </tr>
     </table>
 
     <div class="divider divider-neutral divider-horizontal"></div>
@@ -114,17 +123,17 @@
         <p>{{ game.description }}</p>
       </div>
 
-      <!-- TODO: ICONS -->
-      <p *ngIf="game.website">
-        Website: &nbsp; <a href="{{ game.website }}">website</a>
-      </p>
-      <p *ngIf="game.platforms && game.platforms.length > 0">
-        Platforms:
-        <span *ngFor="let platform of game.platforms">{{ platform }} |&nbsp;</span>
-      </p>
-      <!-- TAGS -->
-      <div *ngIf="game.keywords && game.keywords.length > 0" class="flex gap-2">
-        <div *ngFor="let keyword of game.keywords" class="badge badge-accent font-semibold">
+      <!-- WEBSITE -->
+      <div *ngIf="game.website" class="mb-3 w-full">
+        <a class="btn btn-link" href="{{ game.website }}" target="_blank">
+          <fa-icon class="text-xl me-1" [icon]="faGlobe"></fa-icon>
+          <span>Website</span>
+        </a>
+      </div>
+
+      <!-- KEYWORDS -->
+      <div *ngIf="game.keywords && game.keywords.length > 0" class="flex flex-wrap gap-2">
+        <div *ngFor="let keyword of game.keywords" class="badge badge-neutral font-semibold">
           {{ keyword }}
         </div>
       </div>

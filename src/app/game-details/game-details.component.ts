@@ -4,7 +4,12 @@ import { Router } from '@angular/router';
 import { GameItemInterface } from '../gameItem.interface';
 import { GameDataService } from '../game-data.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faClock, faStar, faCalendar } from '@fortawesome/free-solid-svg-icons';
+import {
+  faClock,
+  faStar,
+  faCalendar,
+  faGlobe,
+} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-game-details',
@@ -17,6 +22,7 @@ export class GameDetailsComponent implements OnInit {
   faClock = faClock;
   faStar = faStar;
   faCalendar = faCalendar;
+  faGlobe = faGlobe;
 
   game: GameItemInterface | undefined;
 
