@@ -1,3 +1,4 @@
+import { BehaviorSubject } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { GameItemInterface } from './gameItem.interface';
 
@@ -23,14 +24,21 @@ export class GameDataService {
   }
 
   // FOR GAME DETAILS ROUTE
-  private selectedGame: GameItemInterface | undefined;
+  private selectedGameSubject = new BehaviorSubject<
+    GameItemInterface | undefined
+  >(undefined);
+  selectedGameChanged = this.selectedGameSubject.asObservable();
+  // private selectedGame: GameItemInterface | undefined;
+
 
   setSelectedGame(game: GameItemInterface): void {
-    this.selectedGame = game;
+    this.selectedGameSubject.next(game);
+    // this.selectedGame = game;
   }
 
   getSelectedGame(): GameItemInterface | undefined {
-    return this.selectedGame;
+    return this.selectedGameSubject.getValue();
+    // return this.selectedGame;
   }
 
   // FOR DUMMY TESTING
