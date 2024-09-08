@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-import { GameItemInterface } from '../gameItem.interface';
-import { GameDataService } from '../game-data.service';
+import { GameItemInterface } from '../../gameItem.interface';
+import { GameDataService } from '../../game-data.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
   faClock,
@@ -47,6 +47,15 @@ export class GameDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.game = this.gameDataService.getSelectedGame();
+
+    // Subscribe to changes
+    this.gameDataService.selectedGameChanged.subscribe({
+      next: (game: GameItemInterface | undefined) => {
+        this.game = game;
+      },
+      error: (err) => console.error('Error loading game:', err)
+    });
+
     console.log('log: Recieved on /game-details: ' + this.game);
 
     // DUMMY DEVELOPMENT DATA

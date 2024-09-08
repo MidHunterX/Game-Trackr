@@ -24,7 +24,7 @@ export class RecentlyPlayedComponent {
   viewDetails(game: GameItemInterface): void {
     this.gameDataService.setSelectedGame(game);
     console.log('log: Sending data to /game-details: ' + game);
-    this.router.navigate(['/game-details']);
+    this.router.navigate(['workspace/game-details']);
     // this.router.navigate(['/game-details', game.id]);
   }
 }
