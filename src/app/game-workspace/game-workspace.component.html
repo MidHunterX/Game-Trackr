@@ -1,0 +1,18 @@
+<div class="flex">
+  <!-- Sidebar -->
+  <div class="w-1/4 p-4 border-r">
+    <ul>
+      <li
+        *ngFor="let game of games"
+        (click)="viewDetails(game)"
+      >
+        {{ game.name }}
+      </li>
+    </ul>
+  </div>
+
+  <!-- Main Content Area -->
+  <div class="w-3/4 p-4">
+    <router-outlet></router-outlet>
+  </div>
+</div>
