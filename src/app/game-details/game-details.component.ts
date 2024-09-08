@@ -3,15 +3,21 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { GameItemInterface } from '../gameItem.interface';
 import { GameDataService } from '../game-data.service';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faClock, faStar, faCalendar } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-game-details',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FontAwesomeModule],
   templateUrl: './game-details.component.html',
   styleUrl: './game-details.component.scss',
 })
 export class GameDetailsComponent implements OnInit {
+  faClock = faClock;
+  faStar = faStar;
+  faCalendar = faCalendar;
+
   game: GameItemInterface | undefined;
 
   constructor(

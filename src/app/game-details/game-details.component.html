@@ -1,10 +1,71 @@
-<section id="gameDetails">
-  <div *ngIf="game">
-    <img [src]="'public/banner/' + game.img + '.jpg'" alt="{{ game.name }}" />
-    <p>ID: {{ game.id }}</p>
-    <h1>{{ game.name }}</h1>
-    <p>Year: {{ game.year }}</p>
-    <p *ngIf="game.developer">Developer: {{ game.developer }}</p>
+<section *ngIf="game" class="container mx-auto">
+  <!-- HERO HEADER -->
+  <header class="relative">
+    <img
+      id="hero-image"
+      class="w-full z-0"
+      loading="lazy"
+      style="mask-image: linear-gradient(to bottom, black 50%, transparent)"
+      [src]="'public/banner/' + game.img + '.jpg'"
+      alt="{{ game.name }}"
+    />
+    <!-- HEADER DETAILS -->
+    <article class="px-4 md:absolute bottom-0 w-full flex justify-between">
+      <div class="content-end">
+        <h1 class="text-4xl lg:text-5xl xl:text-6xl">{{ game.name }}</h1>
+      </div>
+      <img
+        id="cover-art"
+        class="hidden md:block object-cover w-24 lg:w-40 rounded-lg"
+        loading="lazy"
+        [src]="'public/cover/' + game.img + '.jpg'"
+        alt="{{ game.name }}"
+      />
+    </article>
+  </header>
+
+  <section id="game-details" class="px-4">
+
+    <article class="grid grid-cols-3 w-fit gap-8 my-4">
+      <div class="flex place-items-center gap-4">
+        <fa-icon class="text-2xl text-primary" [icon]="faCalendar"></fa-icon>
+        <div>
+          <div class="text-md font-semibold text-gray-600 dark:text-gray-400">
+            Release Year
+          </div>
+          <div class="text-2xl font-black">{{ game.year }}</div>
+          <div class="text-sm text-neutral-500">-- full date here --</div>
+        </div>
+      </div>
+
+      <div class="flex place-items-center gap-4">
+        <fa-icon class="text-2xl text-primary" [icon]="faClock"></fa-icon>
+        <div>
+          <div class="text-md font-semibold text-gray-600 dark:text-gray-400">
+            Playtime
+          </div>
+          <div class="text-2xl font-black">33h</div>
+          <div class="text-sm text-neutral-500">33 Hrs and 3 Mins</div>
+        </div>
+      </div>
+
+      <div class="flex place-items-center gap-4">
+        <fa-icon class="text-2xl text-primary" [icon]="faStar"></fa-icon>
+        <div>
+          <div class="text-md font-semibold text-gray-600 dark:text-gray-400">
+            Rating
+          </div>
+          <div class="text-2xl font-black">{{ game.rating }}</div>
+          <div class="text-sm text-neutral-500">(Community)</div>
+        </div>
+      </div>
+    </article>
+
+
+    <article>
+      <p *ngIf="game.developer">Developer: {{ game.developer }}</p>
+    </article>
+
     <p *ngIf="game.genres && game.genres.length > 0">
       Genre:
       <span *ngFor="let genre of game.genres">{{ genre }} |&nbsp;</span>
@@ -30,12 +91,16 @@
       <span *ngFor="let view of game.pov">{{ view }} |&nbsp;</span>
     </p>
     <p *ngIf="game.rating">Rating: {{ game.rating }}</p>
-    <p *ngIf="game.keywords && game.keywords.length > 0">
+    <!-- tags -->
+    <div *ngIf="game.keywords && game.keywords.length > 0" class="flex gap-2">
       Tags:
-      <span *ngFor="let keyword of game.keywords">{{ keyword }} |&nbsp;</span>
-    </p>
-  </div>
-  <div *ngIf="!game">
-    <p>Loading game details...</p>
-  </div>
+      <div *ngFor="let keyword of game.keywords" class="badge badge-accent">
+        {{ keyword }}
+      </div>
+    </div>
+  </section>
+</section>
+
+<section *ngIf="!game">
+  <p>Loading game details...</p>
 </section>
