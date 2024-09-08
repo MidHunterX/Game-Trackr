@@ -195,6 +195,7 @@
       "political"
     ],
     "img": "bs2",
+    "playtime": 38998,
     "rating": 80
   },
   {
@@ -259,6 +260,7 @@
       "steam trading"
     ],
     "img": "tw2",
+    "playtime": 92632,
     "rating": 85
   },
   {
@@ -354,6 +356,7 @@
       "e3 2004"
     ],
     "img": "tw",
+    "playtime": 112632,
     "rating": 82
   },
   {
@@ -599,6 +602,7 @@
       "political"
     ],
     "img": "bs",
+    "playtime": 49894,
     "rating": 86
   },
   {
@@ -635,6 +639,7 @@
       "rivalry"
     ],
     "img": "nfsr",
+    "playtime": 81342,
     "rating": 88
   },
   {
@@ -652,6 +657,7 @@
     "themes": ["Erotic"],
     "keywords": ["nudity", "sexual content"],
     "img": "dea",
+    "playtime": 104579,
     "rating": 80
   },
   {
@@ -711,6 +717,7 @@
       "random stage selection"
     ],
     "img": "mkx",
+    "playtime": 20453,
     "rating": 80
   },
   {
@@ -728,6 +735,7 @@
     "themes": [],
     "keywords": [],
     "img": "sob",
+    "playtime": 18418,
     "rating": 60
   },
   {
@@ -753,6 +761,7 @@
       "crime"
     ],
     "img": "gtatbogt",
+    "playtime": 97352,
     "rating": 80
   },
   {
@@ -782,6 +791,7 @@
       "you play as the villain"
     ],
     "img": "gtatlad",
+    "playtime": 97352,
     "rating": 80
   },
   {
@@ -885,6 +895,7 @@
       "male protagonist"
     ],
     "img": "scbl",
+    "playtime": 76792,
     "rating": 82
   },
   {
@@ -902,6 +913,7 @@
     "themes": ["Horror"],
     "keywords": ["female protagonist", "cannibalism", "forbidden love"],
     "img": "tcoaal",
+    "playtime": 18567,
     "rating": 81
   },
   {
@@ -930,14 +942,15 @@
       "censored version"
     ],
     "img": "h",
+    "playtime": 4830,
     "rating": 46
   },
   {
     "id": 132,
-    "name": "ユーフォリア (Euphoria)",
+    "name": "\u30e6\u30fc\u30d5\u30a9\u30ea\u30a2 (Euphoria)",
     "year": 2011,
     "developer": "CLOCKUP",
-    "description": "Euphoria takes place in a white room. A white room in which the player has a choice. To insert his keyhole inside the unlocker or die. The problem is that the protagonists keyhole is his penis and the unlocker is a woman’s hole. This is the basic premise of Euphoria. Combine this with fetish fuel h-scenes (including scat) and some good character writing from time to time. Euphoria differentiates itself completely from the typical game of its genre by exploring more of the taboo aspects of sex rather than the actual sex itself. Because of this, Euphoria feels less like a nukige (despite very much fitting the bill) and more like a visual novel that can stand on its own while also adding to the player’s collection of fetishes.",
+    "description": "Euphoria takes place in a white room. A white room in which the player has a choice. To insert his keyhole inside the unlocker or die. The problem is that the protagonists keyhole is his penis and the unlocker is a woman\u2019s hole. This is the basic premise of Euphoria. Combine this with fetish fuel h-scenes (including scat) and some good character writing from time to time. Euphoria differentiates itself completely from the typical game of its genre by exploring more of the taboo aspects of sex rather than the actual sex itself. Because of this, Euphoria feels less like a nukige (despite very much fitting the bill) and more like a visual novel that can stand on its own while also adding to the player\u2019s collection of fetishes.",
     "website": "http://entacom.org/clockup/product/euphoria/index.html",
     "game_engines": [],
     "player_modes": ["Single player"],
@@ -973,6 +986,7 @@
       "Gore"
     ],
     "img": "evn",
+    "playtime": 86082,
     "rating": 0
   },
   {
@@ -1014,7 +1028,9 @@
       "Bad Endings with Story",
       "Few Choices"
     ],
+    "keywords": [],
     "img": "mbvn",
+    "playtime": 131978,
     "rating": 0
   },
   {
@@ -1049,6 +1065,7 @@
       "4k ultra hd"
     ],
     "img": "fc5",
+    "playtime": 271101,
     "rating": 75
   },
   {
@@ -1096,6 +1113,7 @@
       "sexual themes"
     ],
     "img": "bta2",
+    "playtime": 25399,
     "rating": 88
   },
   {
@@ -1132,6 +1150,7 @@
       "sexual themes"
     ],
     "img": "bta1",
+    "playtime": 0,
     "rating": 82
   },
   {
@@ -1149,6 +1168,7 @@
     "themes": ["Action"],
     "keywords": ["fangame"],
     "img": "trtdx",
+    "playtime": 1914,
     "rating": 0
   },
   {
@@ -1207,6 +1227,7 @@
       "male protagonist"
     ],
     "img": "acs",
+    "playtime": 0,
     "rating": 74
   },
   {
@@ -1232,6 +1253,7 @@
     "themes": ["Action", "Survival", "Historical", "Stealth", "Mystery"],
     "keywords": ["action-adventure", "mexico", "lara croft"],
     "img": "sottr",
+    "playtime": 0,
     "rating": 77
   },
   {
@@ -1301,6 +1323,7 @@
       "auto runner"
     ],
     "img": "acu",
+    "playtime": 0,
     "rating": 71
   },
   {
@@ -1318,6 +1341,7 @@
     "themes": ["Erotic"],
     "keywords": [],
     "img": "cc",
+    "playtime": 15612,
     "rating": 0
   },
   {
@@ -1347,6 +1371,7 @@
       "metafiction"
     ],
     "img": "ddlc",
+    "playtime": 0,
     "rating": 82
   },
   {
@@ -1376,6 +1401,7 @@
     "themes": ["Action", "Sandbox", "Open world"],
     "keywords": ["level editor", "time attack", "games with gold"],
     "img": "tmt",
+    "playtime": 0,
     "rating": 78
   },
   {
@@ -1393,6 +1419,7 @@
     "themes": ["Erotic"],
     "keywords": ["nudity", "sexual content"],
     "img": "oa",
+    "playtime": 0,
     "rating": 0
   },
   {
@@ -1410,11 +1437,12 @@
     "themes": [],
     "keywords": [],
     "img": "ss2vn",
+    "playtime": 0,
     "rating": 0
   },
   {
     "id": 118,
-    "name": "ホームレス女子学生",
+    "name": "\u30db\u30fc\u30e0\u30ec\u30b9\u5973\u5b50\u5b66\u751f",
     "year": 2010,
     "developer": "Arkham",
     "description": "A lone girl, wearing a tattered school uniform, lives on a dry river bed. She can't go to school, has no house, not even a tent... just a helpless, lonely girl. She searches garbage cans for food to survive every day. And whenever she is found by vagrants or delinquents, she becomes their plaything. Gang-raped, disgraced, forced to drink semen, dirtied, abused, scorned... This is a visual poem about her everyday life.",
@@ -1448,6 +1476,7 @@
       "Student Protagonist"
     ],
     "img": "hsgvn",
+    "playtime": 0,
     "rating": 0
   },
   {
@@ -1455,7 +1484,7 @@
     "name": "Lala and the Bizarre Dungeon",
     "year": 2019,
     "developer": "C-Laboratory",
-    "description": "Ciela Lanciel (nickname: Lala), a student attending a knight’s academy meets with an accident while in a cave for a practical test, and gets lost in a vast dungeon deep underground. There, countless traps await her… A 2D action RPG that can be controlled using only the mouse. Control Ciela, a trainee knight, fighting monsters as you proceed through a strange dungeon. As the story progresses, our heroine meets with a variety of obscene incidents.",
+    "description": "Ciela Lanciel (nickname: Lala), a student attending a knight\u2019s academy meets with an accident while in a cave for a practical test, and gets lost in a vast dungeon deep underground. There, countless traps await her\u2026 A 2D action RPG that can be controlled using only the mouse. Control Ciela, a trainee knight, fighting monsters as you proceed through a strange dungeon. As the story progresses, our heroine meets with a variety of obscene incidents.",
     "website": "",
     "game_engines": [],
     "player_modes": [],
@@ -1486,6 +1515,7 @@
       "pregnancy"
     ],
     "img": "llbd",
+    "playtime": 0,
     "rating": 0
   },
   {
@@ -1549,6 +1579,7 @@
       "psvita"
     ],
     "img": "ssv",
+    "playtime": 0,
     "rating": 81
   },
   {
@@ -1574,6 +1605,7 @@
     "themes": ["Action", "Survival", "Stealth"],
     "keywords": [],
     "img": "mll",
+    "playtime": 0,
     "rating": 79
   },
   {
@@ -1607,6 +1639,7 @@
     ],
     "keywords": ["russia", "social issues"],
     "img": "m2033",
+    "playtime": 0,
     "rating": 79
   },
   {
@@ -1657,6 +1690,7 @@
       "pax 2008"
     ],
     "img": "va",
+    "playtime": 0,
     "rating": 47
   },
   {
@@ -1819,6 +1853,7 @@
       "male protagonist"
     ],
     "img": "fc2",
+    "playtime": 0,
     "rating": 72
   },
   {
@@ -1881,6 +1916,7 @@
       "pax prime 2011"
     ],
     "img": "me3",
+    "playtime": 0,
     "rating": 85
   },
   {
@@ -2109,6 +2145,7 @@
       "political"
     ],
     "img": "me2",
+    "playtime": 0,
     "rating": 91
   },
   {
@@ -2146,6 +2183,7 @@
       "blamed for real life murders"
     ],
     "img": "me1",
+    "playtime": 0,
     "rating": 86
   },
   {
@@ -2194,6 +2232,7 @@
       "e3 2009"
     ],
     "img": "v",
+    "playtime": 0,
     "rating": 37
   },
   {
@@ -2223,6 +2262,7 @@
       "xbox one backwards compatibility"
     ],
     "img": "bk",
+    "playtime": 0,
     "rating": 63
   },
   {
@@ -2283,6 +2323,7 @@
       "interior design"
     ],
     "img": "mm",
+    "playtime": 0,
     "rating": 75
   },
   {
@@ -2314,6 +2355,7 @@
       "time attack"
     ],
     "img": "ss",
+    "playtime": 0,
     "rating": 71
   },
   {
@@ -2463,6 +2505,7 @@
       "male protagonist"
     ],
     "img": "dehr",
+    "playtime": 0,
     "rating": 83
   },
   {
@@ -2487,6 +2530,7 @@
     "themes": ["Action", "Stealth", "Warfare"],
     "keywords": ["xbox one backwards compatibility"],
     "img": "scc",
+    "playtime": 0,
     "rating": 76
   },
   {
@@ -2615,6 +2659,7 @@
       "male protagonist"
     ],
     "img": "scda",
+    "playtime": 0,
     "rating": 75
   },
   {
@@ -2721,6 +2766,7 @@
       "male protagonist"
     ],
     "img": "scct",
+    "playtime": 0,
     "rating": 84
   },
   {
@@ -2819,6 +2865,7 @@
       "male protagonist"
     ],
     "img": "ts",
+    "playtime": 0,
     "rating": 71
   },
   {
@@ -2847,6 +2894,7 @@
       "off-road racing"
     ],
     "img": "nfspb",
+    "playtime": 0,
     "rating": 62
   },
   {
@@ -2906,6 +2954,7 @@
       "gamescom 2010"
     ],
     "img": "nfshp",
+    "playtime": 0,
     "rating": 78
   },
   {
@@ -2966,6 +3015,7 @@
       "tokyo game show 2011"
     ],
     "img": "bot",
+    "playtime": 0,
     "rating": 62
   },
   {
@@ -2974,9 +3024,16 @@
     "year": 2012,
     "developer": "",
     "description": "",
+    "website": "",
+    "game_engines": [],
+    "player_modes": [],
+    "platforms": [],
+    "pov": [],
     "genres": [],
     "themes": [],
+    "keywords": [],
     "img": "sg",
+    "playtime": 0,
     "rating": 0
   },
   {
@@ -3064,6 +3121,7 @@
       "auto runner"
     ],
     "img": "rm",
+    "playtime": 0,
     "rating": 72
   },
   {
@@ -3188,6 +3246,7 @@
       "male protagonist"
     ],
     "img": "sotl",
+    "playtime": 0,
     "rating": 82
   },
   {
@@ -3243,6 +3302,7 @@
       "weapons"
     ],
     "img": "fcp",
+    "playtime": 0,
     "rating": 71
   },
   {
@@ -3343,6 +3403,7 @@
       "male protagonist"
     ],
     "img": "fc4",
+    "playtime": 0,
     "rating": 76
   },
   {
@@ -3458,6 +3519,7 @@
       "disguise as npc"
     ],
     "img": "wd",
+    "playtime": 0,
     "rating": 73
   },
   {
@@ -3530,6 +3592,7 @@
       "4k ultra hd"
     ],
     "img": "rottr",
+    "playtime": 0,
     "rating": 81
   },
   {
@@ -3729,6 +3792,7 @@
       "male protagonist"
     ],
     "img": "sriv",
+    "playtime": 0,
     "rating": 74
   },
   {
@@ -3888,6 +3952,7 @@
       "e3 2010"
     ],
     "img": "srtt",
+    "playtime": 0,
     "rating": 78
   },
   {
@@ -4120,6 +4185,7 @@
       "cloud gaming"
     ],
     "img": "gtav",
+    "playtime": 0,
     "rating": 89
   },
   {
@@ -4292,6 +4358,7 @@
       "the game awards - world premiere"
     ],
     "img": "mgsv",
+    "playtime": 0,
     "rating": 85
   },
   {
@@ -4452,6 +4519,7 @@
       "e3 2011"
     ],
     "img": "tr",
+    "playtime": 0,
     "rating": 81
   },
   {
@@ -4580,6 +4648,7 @@
       "suggestive themes"
     ],
     "img": "mp3",
+    "playtime": 0,
     "rating": 81
   },
   {
@@ -4638,6 +4707,7 @@
       "persistent world"
     ],
     "img": "sd",
+    "playtime": 0,
     "rating": 80
   },
   {
@@ -4660,6 +4730,7 @@
     "themes": ["Action", "Fantasy"],
     "keywords": ["martial arts"],
     "img": "mk9",
+    "playtime": 0,
     "rating": 81
   },
   {
@@ -4693,6 +4764,7 @@
       "eb games expo australia"
     ],
     "img": "nfstr",
+    "playtime": 0,
     "rating": 68
   },
   {
@@ -4754,6 +4826,7 @@
       "d.i.c.e. awards 2013"
     ],
     "img": "nfsmw2",
+    "playtime": 0,
     "rating": 73
   },
   {
@@ -4924,6 +4997,7 @@
       "male protagonist"
     ],
     "img": "m2",
+    "playtime": 0,
     "rating": 81
   },
   {
@@ -4992,6 +5066,7 @@
       "you play as the villain"
     ],
     "img": "gta4",
+    "playtime": 0,
     "rating": 83
   },
   {
@@ -5038,6 +5113,7 @@
       "you can pet the dog"
     ],
     "img": "acr",
+    "playtime": 0,
     "rating": 72
   },
   {
@@ -5189,6 +5265,7 @@
       "cloud gaming"
     ],
     "img": "ac4",
+    "playtime": 0,
     "rating": 83
   },
   {
@@ -5270,6 +5347,7 @@
       "you can pet the dog"
     ],
     "img": "ac3l",
+    "playtime": 0,
     "rating": 60
   },
   {
@@ -5333,6 +5411,7 @@
       "online multiplayer achievements"
     ],
     "img": "ac3",
+    "playtime": 0,
     "rating": 73
   },
   {
@@ -5391,6 +5470,7 @@
       "in-app purchases"
     ],
     "img": "acrev",
+    "playtime": 0,
     "rating": 76
   },
   {
@@ -5502,6 +5582,7 @@
       "male protagonist"
     ],
     "img": "acbro",
+    "playtime": 0,
     "rating": 82
   },
   {
@@ -5696,6 +5777,7 @@
       "auto runner"
     ],
     "img": "ac2",
+    "playtime": 0,
     "rating": 86
   },
   {
@@ -5758,6 +5840,7 @@
       "lgbtq+"
     ],
     "img": "ac1",
+    "playtime": 0,
     "rating": 73
   },
   {
@@ -5791,6 +5874,7 @@
       "tokyo game show 2012"
     ],
     "img": "hmabs",
+    "playtime": 0,
     "rating": 75
   },
   {
@@ -5898,6 +5982,7 @@
       "cloud gaming"
     ],
     "img": "fc3",
+    "playtime": 0,
     "rating": 83
   },
   {
@@ -5942,6 +6027,7 @@
       "bafta games award"
     ],
     "img": "g2",
+    "playtime": 0,
     "rating": 73
   },
   {
@@ -6105,6 +6191,7 @@
       "political"
     ],
     "img": "codmw3",
+    "playtime": 0,
     "rating": 73
   },
   {
@@ -6297,6 +6384,7 @@
       "e-sports"
     ],
     "img": "codbo1",
+    "playtime": 0,
     "rating": 79
   },
   {
@@ -6344,6 +6432,7 @@
       "political"
     ],
     "img": "codmw2",
+    "playtime": 0,
     "rating": 81
   },
   {
@@ -6556,6 +6645,7 @@
       "e-sports"
     ],
     "img": "cod4mw",
+    "playtime": 0,
     "rating": 84
   },
   {
@@ -6677,6 +6767,7 @@
       "male protagonist"
     ],
     "img": "jc2",
+    "playtime": 0,
     "rating": 77
   },
   {
@@ -6767,6 +6858,7 @@
       "securom"
     ],
     "img": "tru",
+    "playtime": 0,
     "rating": 74
   },
   {
@@ -6842,6 +6934,7 @@
       "grip mechanic"
     ],
     "img": "tra",
+    "playtime": 0,
     "rating": 76
   },
   {
@@ -6915,6 +7008,7 @@
       "securom"
     ],
     "img": "trl",
+    "playtime": 0,
     "rating": 75
   },
   {
@@ -6932,6 +7026,7 @@
     "themes": ["Action", "Science fiction"],
     "keywords": [],
     "img": "xmow",
+    "playtime": 0,
     "rating": 79
   },
   {
@@ -6973,6 +7068,7 @@
     ],
     "keywords": ["60 fps on consoles"],
     "img": "mc",
+    "playtime": 0,
     "rating": 79
   },
   {
@@ -7026,6 +7122,7 @@
       "viral achievement"
     ],
     "img": "nfsc",
+    "playtime": 0,
     "rating": 72
   },
   {
@@ -7119,6 +7216,7 @@
       "e3 2005"
     ],
     "img": "jc",
+    "playtime": 0,
     "rating": 63
   },
   {
@@ -7153,6 +7251,7 @@
       "e3 2004"
     ],
     "img": "zt2",
+    "playtime": 0,
     "rating": 65
   },
   {
@@ -7223,6 +7322,7 @@
       "roaming the countryside"
     ],
     "img": "tod",
+    "playtime": 0,
     "rating": 69
   },
   {
@@ -7338,6 +7438,7 @@
       "male protagonist"
     ],
     "img": "cod3",
+    "playtime": 0,
     "rating": 70
   },
   {
@@ -7460,6 +7561,7 @@
       "male protagonist"
     ],
     "img": "cod2",
+    "playtime": 0,
     "rating": 83
   },
   {
@@ -7563,6 +7665,7 @@
       "male protagonist"
     ],
     "img": "cod",
+    "playtime": 0,
     "rating": 81
   },
   {
@@ -7608,6 +7711,7 @@
       "super soldier"
     ],
     "img": "tih",
+    "playtime": 0,
     "rating": 61
   },
   {
@@ -7625,6 +7729,7 @@
     "themes": ["Action", "Science fiction"],
     "keywords": [],
     "img": "fc",
+    "playtime": 0,
     "rating": 78
   },
   {
@@ -7658,6 +7763,7 @@
       "surprising character switches"
     ],
     "img": "mp2",
+    "playtime": 0,
     "rating": 86
   },
   {
@@ -7773,6 +7879,7 @@
       "dynamic narrative"
     ],
     "img": "mp",
+    "playtime": 0,
     "rating": 85
   },
   {
@@ -7889,6 +7996,7 @@
       "securom"
     ],
     "img": "hm4bm",
+    "playtime": 0,
     "rating": 83
   },
   {
@@ -7906,6 +8014,7 @@
     "themes": ["Action", "Stealth"],
     "keywords": ["assassin"],
     "img": "hm3c",
+    "playtime": 0,
     "rating": 77
   },
   {
@@ -7968,6 +8077,7 @@
       "e3 2002"
     ],
     "img": "hm2sa",
+    "playtime": 0,
     "rating": 81
   },
   {
@@ -7985,6 +8095,7 @@
     "themes": ["Action", "Stealth"],
     "keywords": ["assassin"],
     "img": "hm",
+    "playtime": 0,
     "rating": 75
   },
   {
@@ -8016,6 +8127,7 @@
       "e3 2008"
     ],
     "img": "fror",
+    "playtime": 0,
     "rating": 50
   },
   {
@@ -8058,6 +8170,7 @@
       "physics manipulation"
     ],
     "img": "abs",
+    "playtime": 0,
     "rating": 77
   },
   {
@@ -8082,6 +8195,7 @@
     "themes": [],
     "keywords": ["casual"],
     "img": "bp",
+    "playtime": 0,
     "rating": 67
   },
   {
@@ -8106,6 +8220,7 @@
       "pig"
     ],
     "img": "abr",
+    "playtime": 0,
     "rating": 63
   },
   {
@@ -8131,6 +8246,7 @@
       "camera shift"
     ],
     "img": "igi2",
+    "playtime": 0,
     "rating": 74
   },
   {
@@ -8161,6 +8277,7 @@
       "infinite spawn"
     ],
     "img": "igi",
+    "playtime": 0,
     "rating": 74
   },
   {
@@ -8250,6 +8367,7 @@
       "male protagonist"
     ],
     "img": "poptt",
+    "playtime": 0,
     "rating": 80
   },
   {
@@ -8335,6 +8453,7 @@
       "male protagonist"
     ],
     "img": "popww",
+    "playtime": 0,
     "rating": 82
   },
   {
@@ -8396,6 +8515,7 @@
       "d.i.c.e. awards 2013"
     ],
     "img": "nfsmw",
+    "playtime": 0,
     "rating": 73
   },
   {
@@ -8447,6 +8567,7 @@
       "xbox 360 backwards compatibility"
     ],
     "img": "nfsug2",
+    "playtime": 0,
     "rating": 83
   },
   {
@@ -8490,6 +8611,7 @@
       "interactive achievement awards 2004"
     ],
     "img": "nfsug",
+    "playtime": 0,
     "rating": 83
   },
   {
@@ -8546,6 +8668,7 @@
       "male protagonist"
     ],
     "img": "ff",
+    "playtime": 0,
     "rating": 78
   },
   {
@@ -8653,6 +8776,7 @@
       "you play as the villain"
     ],
     "img": "gtasa",
+    "playtime": 0,
     "rating": 90
   },
   {
@@ -8753,6 +8877,7 @@
       "male protagonist"
     ],
     "img": "gtavc",
+    "playtime": 0,
     "rating": 87
   },
   {
@@ -8814,6 +8939,7 @@
       "game developers choice awards 2002"
     ],
     "img": "gta3",
+    "playtime": 0,
     "rating": 85
   },
   {
@@ -8845,6 +8971,7 @@
       "lgbtq+"
     ],
     "img": "hpcs",
+    "playtime": 0,
     "rating": 73
   },
   {
@@ -8892,6 +9019,7 @@
       "achievement hitching"
     ],
     "img": "mcm2",
+    "playtime": 0,
     "rating": 74
   },
   {
@@ -8909,6 +9037,7 @@
     "themes": [],
     "keywords": [],
     "img": "nfs2",
+    "playtime": 0,
     "rating": 76
   },
   {
@@ -8926,6 +9055,7 @@
     "themes": ["Action"],
     "keywords": ["bootleg", "unlicensed game"],
     "img": "mk4",
+    "playtime": 0,
     "rating": 0
   },
   {
@@ -8949,6 +9079,7 @@
       "wheelman"
     ],
     "img": "mtm2",
+    "playtime": 0,
     "rating": 65
   },
   {
@@ -8973,6 +9104,7 @@
       "wheelman"
     ],
     "img": "mtm",
+    "playtime": 0,
     "rating": 71
   },
   {
@@ -9086,6 +9218,7 @@
       "playstation underground"
     ],
     "img": "tr3",
+    "playtime": 0,
     "rating": 77
   },
   {
@@ -9193,6 +9326,7 @@
       "playstation underground"
     ],
     "img": "tr2",
+    "playtime": 0,
     "rating": 80
   },
   {
@@ -9388,6 +9522,7 @@
       "playstation underground"
     ],
     "img": "tr1",
+    "playtime": 0,
     "rating": 80
   },
   {
@@ -9410,6 +9545,7 @@
     "themes": ["Action", "Science fiction"],
     "keywords": ["movie games", "superhero", "comic book", "spider-man"],
     "img": "sm",
+    "playtime": 0,
     "rating": 67
   },
   {
@@ -9432,6 +9568,7 @@
     "themes": ["Action"],
     "keywords": ["vehicular combat", "combat"],
     "img": "rr",
+    "playtime": 0,
     "rating": 80
   },
   {
@@ -9474,6 +9611,7 @@
       "xbox 360 backwards compatibility"
     ],
     "img": "c2",
+    "playtime": 0,
     "rating": 86
   },
   {
@@ -9513,6 +9651,7 @@
       "retroachievements"
     ],
     "img": "dt",
+    "playtime": 0,
     "rating": 69
   },
   {
@@ -9536,6 +9675,7 @@
     "themes": ["Action"],
     "keywords": ["compilation", "hercules", "film", "emulation"],
     "img": "dh",
+    "playtime": 0,
     "rating": 75
   },
   {
@@ -9590,6 +9730,7 @@
       "player's choice"
     ],
     "img": "dlk",
+    "playtime": 0,
     "rating": 76
   },
   {
@@ -9646,6 +9787,7 @@
       "player's choice"
     ],
     "img": "da",
+    "playtime": 0,
     "rating": 81
   },
   {
@@ -9683,6 +9825,7 @@
       "zoom platform"
     ],
     "img": "as",
+    "playtime": 0,
     "rating": 71
   },
   {
@@ -9724,6 +9867,7 @@
       "e3 1996"
     ],
     "img": "vc2",
+    "playtime": 0,
     "rating": 72
   },
   {
@@ -9797,6 +9941,7 @@
       "fan translation - tagalog"
     ],
     "img": "mm7",
+    "playtime": 0,
     "rating": 77
   },
   {
@@ -9838,6 +9983,7 @@
       "male protagonist"
     ],
     "img": "ddrr",
+    "playtime": 0,
     "rating": 0
   },
   {
@@ -9874,6 +10020,7 @@
       "male protagonist"
     ],
     "img": "ddhm",
+    "playtime": 0,
     "rating": 83
   },
   {
@@ -9900,6 +10047,7 @@
       "male protagonist"
     ],
     "img": "dd",
+    "playtime": 0,
     "rating": 59
   },
   {
@@ -9923,6 +10071,7 @@
     "themes": ["Action", "Fantasy", "Historical"],
     "keywords": ["action-adventure", "digital distribution"],
     "img": "pop2",
+    "playtime": 0,
     "rating": 70
   },
   {
@@ -9940,6 +10089,7 @@
     "themes": ["Action"],
     "keywords": [],
     "img": "pop1",
+    "playtime": 0,
     "rating": 79
   },
   {
@@ -9962,6 +10112,7 @@
       "male protagonist"
     ],
     "img": "mpockets",
+    "playtime": 0,
     "rating": 0
   },
   {
@@ -9970,9 +10121,16 @@
     "year": 1986,
     "developer": "",
     "description": "",
+    "website": "",
+    "game_engines": [],
+    "player_modes": [],
+    "platforms": [],
+    "pov": [],
     "genres": [],
     "themes": [],
+    "keywords": [],
     "img": "or",
+    "playtime": 0,
     "rating": 0
   }
 ]
