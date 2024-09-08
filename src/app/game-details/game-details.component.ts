@@ -37,6 +37,8 @@ export class GameDetailsComponent implements OnInit {
   faGamepad = faGamepad;
 
   game: GameItemInterface | undefined;
+  playtimeHours: number | undefined;
+  playtimeMinutes: number | undefined;
 
   constructor(
     private router: Router,
@@ -46,6 +48,10 @@ export class GameDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.game = this.gameDataService.getSelectedGame();
     console.log('log: Recieved on /game-details: ' + this.game);
+
+    if (this.game && this.game.playtime) {
+      this.calculatePlaytime(this.game.playtime);
+    }
 
     // DUMMY DEVELOPMENT DATA
     if (this.gameDataService.isDevelopment()) {
@@ -66,6 +72,7 @@ export class GameDetailsComponent implements OnInit {
         themes: ['Horror'],
         keywords: ['female protagonist', 'cannibalism', 'forbidden love'],
         img: 'tcoaal',
+        playtime: 25000,
         rating: 81,
       };
     }
@@ -73,5 +80,10 @@ export class GameDetailsComponent implements OnInit {
     if (!this.game) {
       this.router.navigate(['/']);
     }
+  }
+
+  calculatePlaytime(playtimeInSeconds: number): void {
+    this.playtimeHours = Math.floor(playtimeInSeconds / 3600);
+    this.playtimeMinutes = Math.floor((playtimeInSeconds % 3600) / 60);
   }
 }
