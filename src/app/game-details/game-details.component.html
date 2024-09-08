@@ -66,12 +66,18 @@
   <section id="game-details" class="px-4 sm:flex">
     <table id="left-details" class="w-full h-fit mb-8 sm:w-fit sm:mb-0 flex-shrink-0">
       <tr *ngIf="game.developer">
-        <th>Developer</th>
+        <th>
+          <fa-icon class="text-accent me-1" [icon]="faUser"></fa-icon>
+          Developer
+        </th>
         <td>{{ game.developer }}</td>
       </tr>
 
       <tr *ngIf="game.game_engines && game.game_engines.length > 0">
-        <th>Engine</th>
+        <th>
+          <fa-icon class="text-accent me-1" [icon]="faGears"></fa-icon>
+          Engine
+        </th>
         <td>
           <table *ngFor="let engine of game.game_engines">
             <tr>{{ engine }}</tr>
@@ -80,7 +86,10 @@
       </tr>
 
       <tr *ngIf="game.genres && game.genres.length > 0">
-        <th>Genres</th>
+        <th>
+          <fa-icon class="text-accent me-1" [icon]="faMasksTheater"></fa-icon>
+          Genres
+        </th>
         <td>
           <table *ngFor="let genre of game.genres">
             <tr>{{ genre }}</tr>
@@ -89,7 +98,10 @@
       </tr>
 
       <tr *ngIf="game.themes && game.themes.length > 0">
-        <th>Themes</th>
+        <th>
+          <fa-icon class="text-accent me-1" [icon]="faGun"></fa-icon>
+          Themes
+        </th>
         <td>
           <table *ngFor="let theme of game.themes">
             <tr>{{ theme }}</tr>
@@ -98,7 +110,10 @@
       </tr>
 
       <tr *ngIf="game.pov && game.pov.length > 0">
-        <th>Point of View</th>
+        <th>
+          <fa-icon class="text-accent me-1" [icon]="faEye"></fa-icon>
+          Point of View
+        </th>
         <td>
           <table *ngFor="let view of game.pov">
             <tr>{{ view }}</tr>
@@ -107,7 +122,10 @@
       </tr>
 
       <tr *ngIf="game.platforms && game.platforms.length > 0">
-        <th>Platforms</th>
+        <th>
+          <fa-icon class="text-accent me-1" [icon]="faGamepad"></fa-icon>
+          Platforms
+        </th>
         <td>
           <table *ngFor="let platform of game.platforms">
             {{ platform }}

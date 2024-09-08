@@ -9,6 +9,12 @@ import {
   faStar,
   faCalendar,
   faGlobe,
+  faUser,
+  faGears,
+  faMasksTheater,
+  faGun,
+  faEye,
+  faGamepad,
 } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -23,6 +29,12 @@ export class GameDetailsComponent implements OnInit {
   faStar = faStar;
   faCalendar = faCalendar;
   faGlobe = faGlobe;
+  faUser = faUser;
+  faGears = faGears;
+  faMasksTheater = faMasksTheater;
+  faGun = faGun;
+  faEye = faEye;
+  faGamepad = faGamepad;
 
   game: GameItemInterface | undefined;
 

@@ -5,9 +5,11 @@
 - [ ] Add/remove IGDB entries from all games at once
 - [ ] Generate raster gaussian blur for background instead of CSS blur filter (resource intensive)
 - [ ] Playnite integration for gameplay analytics
+- [x] URLs without id attrib to avoid history spamming (not really needed as data is handed over to next page)
+- [x] Optimization: Data is handed over to routes to avoid data reloading
 - [x] IGDB API integration for game data
 - [x] Loads data one time and passes to other pages
-- [x] Lazy loading images
+- [x] Optimization: Lazy loading images
 
 ## 🚀 Quickstart
 
