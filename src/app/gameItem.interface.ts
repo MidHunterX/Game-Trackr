@@ -13,5 +13,6 @@ export interface GameItemInterface {
   themes: string[];
   keywords: string[];
   img: string;
+  playtime: number,
   rating: number;
 }
