@@ -49,32 +49,32 @@ export class GameDetailsComponent implements OnInit {
     this.game = this.gameDataService.getSelectedGame();
     console.log('log: Recieved on /game-details: ' + this.game);
 
-    if (this.game && this.game.playtime) {
-      this.calculatePlaytime(this.game.playtime);
-    }
-
     // DUMMY DEVELOPMENT DATA
     if (this.gameDataService.isDevelopment()) {
       this.game = {
         id: 134,
-        name: 'The Coffin of Andy and Leyley',
-        year: 2023,
-        developer: 'Nemlei',
+        name: 'Game Completion Tracker',
+        year: 2024,
+        developer: 'Mid Hunter',
         description:
-          'In The Coffin of Andy and Leyley, you follow the story of Andrew and Ashley, siblings who have been quarantined in their house for months and are slowly starving to death. Everyone in the building appears to have contracted a contagious disease and are now locked in their apartments by armed guards. The guards do keep promising to bring food, but none ever comes, so eventually they have to resort to drastic measures.',
+          'This is an Angular-based single-page application (SPA) designed to help me share my game completions and stay organized with my gaming activities. The platform offers a visually engaging and user-friendly interface, where others can explore details about various games, track my progress, and navigate seamlessly between game details.',
         website:
-          'https://store.steampowered.com/app/2378900/The_Coffin_of_Andy_and_Leyley/',
-        game_engines: ['Rpgmaker'],
+          'https://midhunterx.github.io/',
+        game_engines: ['Angular 14'],
         player_modes: ['Single player'],
-        platforms: ['PC (Microsoft Windows)'],
-        pov: ['Bird view / Isometric', 'Text'],
-        genres: ['Role-playing (RPG)', 'Adventure', 'Visual Novel'],
-        themes: ['Horror'],
-        keywords: ['female protagonist', 'cannibalism', 'forbidden love'],
-        img: 'tcoaal',
+        platforms: ['GNU / Linux', 'Microsoft Windows', 'MacOS'],
+        pov: ['Website', 'SPA'],
+        genres: ['Game Tracking', 'Completion List', 'IGDB'],
+        themes: ['Gaming'],
+        keywords: ['It', 'is', 'my', 'first time', 'developing', 'in', 'Angular'],
+        img: 'rm',
         playtime: 25000,
-        rating: 81,
+        rating: 69,
       };
+    }
+
+    if (this.game && this.game.playtime) {
+      this.calculatePlaytime(this.game.playtime);
     }
 
     if (!this.game) {
