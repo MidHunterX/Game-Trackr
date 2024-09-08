@@ -1,5 +1,14 @@
 # Game Completion Tracker
 
+## ⚡ Features
+
+- [ ] Add/remove IGDB entries from all games at once
+- [ ] Generate raster gaussian blur for background instead of CSS blur filter (resource intensive)
+- [ ] Playnite integration for gameplay analytics
+- [x] IGDB API integration for game data
+- [x] Loads data one time and passes to other pages
+- [x] Lazy loading images
+
 ## 🚀 Quickstart
 
 Step 1: Clone the project, cd into it and install dependencies
@@ -36,13 +45,15 @@ Step 4: Profit?
 
 ## 💽 Technologies Used
 
-| Technology  | Description                |
-| ----------- | -------------------------- |
-| Angular 18  | Web Application Framework  |
-| HTML5       | Frontend Markup Language   |
-| SASS        | Better styling DX          |
-| TailwindCSS | CSS Framework              |
-| DaisyUI     | Tailwind Component Library |
+| Technology           | Description                  |
+| -------------------- | ---------------------------- |
+| Angular 18           | Web Application Framework    |
+| HTML5                | Frontend Markup Language     |
+| SASS                 | Better styling DX            |
+| TailwindCSS          | CSS Framework                |
+| DaisyUI              | Tailwind Component Library   |
+| angular-fontawesome  | Font Awesome for Angular     |
+| free-solid-svg-icons | Solid Icons for Font Awesome |
 
 # Angular 18 Notes
 
@@ -93,6 +104,17 @@ export const appConfig: ApplicationConfig = {
       }),
     ),
   ],
+};
+```
+
+Handling same url route navigation (OnSameUrlNavigation):
+
+```ts
+// app.config.ts
+import { withRouterConfig } from "@angular/router";
+
+export const appConfig: ApplicationConfig = {
+  providers: [provideRouter(routes, withRouterConfig({ onSameUrlNavigation: "reload" }))],
 };
 ```
 
