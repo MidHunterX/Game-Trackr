@@ -60,6 +60,10 @@ Step 4: Profit?
 | angular-fontawesome  | Font Awesome for Angular     |
 | free-solid-svg-icons | Solid Icons for Font Awesome |
 
+## Personal Note
+
+BG Blur = 19:6 + h-180 + Gaussian Blur 15px
+
 # Angular 18 Notes
 
 Having favicon and a Public Directory:
