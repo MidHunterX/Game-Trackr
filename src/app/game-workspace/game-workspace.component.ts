@@ -14,6 +14,7 @@ import { GameDataService } from '../game-data.service';
 })
 export class GameWorkspaceComponent implements OnInit {
   games: GameItemInterface[] = [];
+  game: GameItemInterface | undefined;
 
   constructor(
     // private router: Router,
@@ -32,6 +33,14 @@ export class GameWorkspaceComponent implements OnInit {
         })
         .catch((error) => console.error('Error loading GameData:', error));
     }
+
+    // Subscribe to changes
+    this.gameDataService.selectedGameChanged.subscribe({
+      next: (game: GameItemInterface | undefined) => {
+        this.game = game;
+      },
+      error: (err) => console.error('Error loading game:', err)
+    });
   }
 
   viewDetails(game: GameItemInterface): void {
