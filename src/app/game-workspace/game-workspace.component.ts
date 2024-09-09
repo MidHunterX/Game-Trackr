@@ -6,6 +6,7 @@ import { GameItemInterface } from '../gameItem.interface';
 import { GameDataService } from '../game-data.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-game-workspace',
@@ -19,6 +20,8 @@ export class GameWorkspaceComponent implements OnInit {
 
   games: GameItemInterface[] = [];
   game: GameItemInterface | undefined;
+
+  @ViewChild('sidebarContainer') sidebarContainer!: ElementRef;
 
   constructor(
     // private router: Router,
@@ -37,6 +40,21 @@ export class GameWorkspaceComponent implements OnInit {
         })
         .catch((error) => console.error('Error loading GameData:', error));
     }
+
+    // Scroll to selected game in Sidebar
+    setTimeout(() => {
+      const selectedElement = document.getElementById('selected-game');
+      console.log(
+        'log: Finding scrollbar selected element: ' +
+          selectedElement?.innerText,
+      );
+      if (selectedElement) {
+        selectedElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'nearest',
+        });
+      }
+    }, 100); // Delay to ensure the DOM is updated
 
     // Subscribe to changes
     this.gameDataService.selectedGameChanged.subscribe({
