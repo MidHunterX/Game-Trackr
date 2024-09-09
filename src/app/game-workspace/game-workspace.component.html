@@ -1,5 +1,5 @@
-<!-- INFO: TEMPORARY BG-BLUR -->
-<img *ngIf="game" [src]="'public/banner/' + game.img + '.jpg'" class="fixed scale-110 top-0 left-0 h-screen min-w-full object-cover opacity-20 dark:opacity-30 blur-2xl" alt=""/>
+<!-- BG-BLUR -->
+<img *ngIf="game" [src]="'public/blur/' + game.img + '.jpg'" class="fixed top-0 left-0 h-screen min-w-full object-cover opacity-30 dark:opacity-40" alt=""/>
 
 <!-- NAVBAR FOR MOBILE -->
 <nav class="navbar sticky lg:hidden bg-base-300 w-full">
@@ -21,8 +21,8 @@
     <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay">
     </label>
     <ul *ngIf="game" class="menu p-0 bg-base-300 lg:bg-transparent text-base-content min-h-full w-[26rem] xl:w-[28rem]">
-      <!-- INFO: TEMPORARY BG-BLUR TO HIDE TEXT SCROLLING UNDERNEATH IT -->
-      <nav class="navbar sticky top-0 lg:bg-transparent lg:backdrop-blur-lg bg-base-300 w-full z-10">
+      <!-- BG-BLUR TO HIDE TEXT SCROLLING UNDERNEATH IT -->
+      <nav class="navbar sticky top-0 lg:bg-transparent lg:backdrop-blur-xl bg-base-300 w-full z-10">
         <div class="flex-none lg:hidden">
           <label for="my-drawer-2" class="btn btn-square btn-ghost drawer-button lg:hidden">
             <fa-icon class="text-2xl text-primary" [icon]="faBars"></fa-icon>
