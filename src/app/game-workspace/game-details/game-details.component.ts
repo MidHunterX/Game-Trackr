@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+// import { Router } from '@angular/router';
 import { GameItemInterface } from '../../gameItem.interface';
 import { GameDataService } from '../../game-data.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -41,7 +41,7 @@ export class GameDetailsComponent implements OnInit {
   playtimeMinutes: number | undefined;
 
   constructor(
-    private router: Router,
+    // private router: Router,
     private gameDataService: GameDataService,
   ) {}
 
@@ -58,11 +58,12 @@ export class GameDetailsComponent implements OnInit {
           this.calculatePlaytime(this.game.playtime);
         }
       },
-      error: (err) => console.error('Error loading game:', err)
+      error: (err) => console.error('Error loading game:', err),
     });
 
-    // DUMMY DEVELOPMENT DATA
-    if (this.gameDataService.isDevelopment()) {
+    // DEFAULT DATA
+    if (!this.game) {
+      // this.router.navigate(['/']);
       this.game = {
         id: 134,
         name: 'Game Completion Tracker',
@@ -70,28 +71,32 @@ export class GameDetailsComponent implements OnInit {
         developer: 'Mid Hunter',
         description:
           'This is an Angular-based single-page application (SPA) designed to help me share my game completions and stay organized with my gaming activities. The platform offers a visually engaging and user-friendly interface, where others can explore details about various games, track my progress, and navigate seamlessly between game details.',
-        website:
-          'https://midhunterx.github.io/',
+        website: 'https://midhunterx.github.io/',
         game_engines: ['Angular 14'],
         player_modes: ['Single player'],
         platforms: ['GNU / Linux', 'Microsoft Windows', 'MacOS'],
         pov: ['Website', 'SPA'],
         genres: ['Game Tracking', 'Completion List', 'IGDB'],
         themes: ['Gaming'],
-        keywords: ['It', 'is', 'my', 'first time', 'developing', 'in', 'Angular'],
-        img: 'rm',
-        playtime: 25000,
+        keywords: [
+          'It',
+          'is',
+          'my',
+          'first time',
+          'developing',
+          'in',
+          'Angular',
+        ],
+        img: '+',
+        playtime: 22140,
         rating: 69,
       };
+      this.gameDataService.setSelectedGame(this.game);
     }
 
     if (this.game && this.game.playtime) {
       console.log('log: Calculating time: ' + this.game.playtime);
       this.calculatePlaytime(this.game.playtime);
-    }
-
-    if (!this.game) {
-      this.router.navigate(['/']);
     }
   }
 
