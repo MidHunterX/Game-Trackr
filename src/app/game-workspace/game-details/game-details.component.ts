@@ -65,7 +65,7 @@ export class GameDetailsComponent implements OnInit {
     if (!this.game) {
       // this.router.navigate(['/']);
       this.game = {
-        id: 134,
+        id: 69,
         name: 'Game Completion Tracker',
         year: 2024,
         developer: 'Mid Hunter',
