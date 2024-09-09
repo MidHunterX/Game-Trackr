@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+// import { Router } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
 import { GameItemInterface } from '../gameItem.interface';
 import { GameDataService } from '../game-data.service';
@@ -16,7 +16,7 @@ export class GameWorkspaceComponent implements OnInit {
   games: GameItemInterface[] = [];
 
   constructor(
-    private router: Router,
+    // private router: Router,
     private gameDataService: GameDataService,
   ) {}
 
