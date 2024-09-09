@@ -37,7 +37,13 @@
           [id]="game.id === gameItem.id ? 'selected-game' : null"
           [ngClass]="{'bg-neutral-500/40 hover:bg-neutral-500/40': game.id === gameItem.id}"
           class="text-lg truncate py-3 px-8">
-          {{ gameItem.name }}
+          <img
+            class="object-fill w-8 rounded-lg font-black truncate"
+            loading="lazy"
+            [src]="'public/icon/' + gameItem.img + '.png'"
+            alt="{{ gameItem.img }}"
+          />
+          <span>{{ gameItem.name }}</span>
         </a>
       </li>
     </ul>
