@@ -2,11 +2,14 @@
 
 ## ⚡ Features
 
-- [ ] Add/remove IGDB entries from all games at once
 - [ ] Generate raster gaussian blur for background instead of CSS blur filter (resource intensive)
 - [ ] Playnite integration for gameplay analytics
+- [ ] Vimium / Tridactyl / Keyboard friendly navigation.
+- [x] Smartphone / Tablet friendly navigation.
+- [x] Ability to set custom scroll position throughout Game Details navigation.
 - [x] URLs without id attrib to avoid history spamming (not really needed as data is handed over to next page)
 - [x] Optimization: Data is handed over to routes to avoid data reloading
+- [x] Add/remove IGDB entries from all games at once
 - [x] IGDB API integration for game data
 - [x] Loads data one time and passes to other pages
 - [x] Optimization: Lazy loading images
@@ -56,6 +59,10 @@ Step 4: Profit?
 | DaisyUI              | Tailwind Component Library   |
 | angular-fontawesome  | Font Awesome for Angular     |
 | free-solid-svg-icons | Solid Icons for Font Awesome |
+
+## Personal Note
+
+BG Blur = 19:6 + h-180 + Gaussian Blur 15px
 
 # Angular 18 Notes
 
