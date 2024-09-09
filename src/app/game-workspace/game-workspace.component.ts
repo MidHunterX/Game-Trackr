@@ -4,15 +4,19 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { GameItemInterface } from '../gameItem.interface';
 import { GameDataService } from '../game-data.service';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-game-workspace',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterOutlet, FontAwesomeModule],
   templateUrl: './game-workspace.component.html',
   styleUrl: './game-workspace.component.scss',
 })
 export class GameWorkspaceComponent implements OnInit {
+  faBars = faBars;
+
   games: GameItemInterface[] = [];
   game: GameItemInterface | undefined;
 
@@ -39,7 +43,7 @@ export class GameWorkspaceComponent implements OnInit {
       next: (game: GameItemInterface | undefined) => {
         this.game = game;
       },
-      error: (err) => console.error('Error loading game:', err)
+      error: (err) => console.error('Error loading game:', err),
     });
   }
 
