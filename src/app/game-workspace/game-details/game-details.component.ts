@@ -47,16 +47,19 @@ export class GameDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.game = this.gameDataService.getSelectedGame();
+    console.log('log: Recieved on /game-details: ' + this.game);
 
     // Subscribe to changes
     this.gameDataService.selectedGameChanged.subscribe({
       next: (game: GameItemInterface | undefined) => {
         this.game = game;
+        if (this.game && this.game.playtime) {
+          console.log('log: Calculating time: ' + this.game.playtime);
+          this.calculatePlaytime(this.game.playtime);
+        }
       },
       error: (err) => console.error('Error loading game:', err)
     });
-
-    console.log('log: Recieved on /game-details: ' + this.game);
 
     // DUMMY DEVELOPMENT DATA
     if (this.gameDataService.isDevelopment()) {
@@ -83,6 +86,7 @@ export class GameDetailsComponent implements OnInit {
     }
 
     if (this.game && this.game.playtime) {
+      console.log('log: Calculating time: ' + this.game.playtime);
       this.calculatePlaytime(this.game.playtime);
     }
 
