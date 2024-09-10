@@ -3,11 +3,12 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common'; // *ngFor
 import { GameItemInterface } from '../../gameItem.interface';
 import { GameDataService } from '../../game-data.service';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-game-cards', // HTML Tag Name
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NgOptimizedImage],
   templateUrl: './game-cards.component.html',
   styleUrl: './game-cards.component.scss',
 })
