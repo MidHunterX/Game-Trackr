@@ -1,12 +1,28 @@
-<section class="hero min-h-[90vh]">
-  <div class="hero-content">
-    <div class="container">
-      <h1 class="text-8xl font-bold">Greetings</h1>
-      <p class="text-3xl font-bold">Fellow Traveller</p>
-      <p class="py-6 text-justify">
-        Scroll down to browse through all PC games that I have Played or
-        Completed. Select a Game Card to view more details. Good luck.
-      </p>
-    </div>
+<section class="hero min-h-[80vh]">
+  <div class="container">
+    <h1 class="text-8xl font-bold">Greetings</h1>
+    <p class="text-3xl font-bold">Fellow Traveller</p>
+    <p class="text-lg max-w-2xl py-6 text-justify">
+      Scroll down to browse through all PC games that I have Played or
+      Completed. <br />
+      Select a Game Card to view more details. Good luck.
+    </p>
+
+    <article *ngIf="games">
+      <!-- AUTOCOMPLETION INPUT -->
+      <!-- HACK: option value is game.name instead of reliable game.id due to better UX -->
+      <input
+        type="search"
+        list="games"
+        placeholder="Search for games..."
+        class="input input-bordered w-full max-w-xs"
+        (change)="onGameSelected($event)"
+      />
+      <datalist id="games">
+        <option *ngFor="let gameItem of games" [value]="gameItem.name">
+          {{ gameItem.name }}
+        </option>
+      </datalist>
+    </article>
   </div>
 </section>
