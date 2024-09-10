@@ -3,7 +3,7 @@
 ## ⚡ Features
 
 - [ ] Playnite integration for gameplay analytics
-- [x] Vimium / Tridactyl / Keyboard friendly navigation.
+- [x] Vimium / Tridactyl / Keyboard friendly navigation (ft. tabindex="0")
 - [x] Smartphone / Tablet friendly navigation.
 - [x] Generate raster gaussian blur for background instead of CSS blur filter (resource intensive)
 - [x] Ability to set custom user scroll position on Game Details throughout sidebar navigation.
@@ -13,6 +13,11 @@
 - [x] IGDB API integration for game data
 - [x] Loads data one time and passes to other pages
 - [x] Optimization: Lazy loading images
+
+Extras
+
+- [ ] Character movement on hero with Spine Animation
+- [ ] Emulation of hero image depth using GSAP
 
 ## 🚀 Quickstart
 

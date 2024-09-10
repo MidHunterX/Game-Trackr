@@ -5,7 +5,7 @@ import { RouterOutlet } from '@angular/router';
 import { GameItemInterface } from '../gameItem.interface';
 import { GameDataService } from '../game-data.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { ElementRef, ViewChild } from '@angular/core';
 
 @Component({
@@ -17,6 +17,7 @@ import { ElementRef, ViewChild } from '@angular/core';
 })
 export class GameWorkspaceComponent implements OnInit {
   faBars = faBars;
+  faBack = faArrowLeft;
 
   games: GameItemInterface[] = [];
   game: GameItemInterface | undefined;
