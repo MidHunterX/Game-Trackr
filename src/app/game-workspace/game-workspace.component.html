@@ -12,14 +12,12 @@
 
 <div class="drawer lg:drawer-open w-full">
   <input id="my-drawer-2" type="checkbox" class="drawer-toggle w-0" />
-  <div
-    class="drawer-content"
-    style=".element:focus { outline: none; }"
-    tabindex="0"
-  >
-    <!-- WORKSPACE CONTENT -->
-    <router-outlet></router-outlet>
+
+  <!-- HACK: tab navigation focuses on tabindex="0" & vimium focuses on <a> -->
+  <div class="drawer-content" tabindex="0">
+    <a><router-outlet></router-outlet></a>
   </div>
+
   <div class="drawer-side">
     <!-- toggle sidebar button on overlay -->
     <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay">
