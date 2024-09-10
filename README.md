@@ -23,7 +23,7 @@
 - [x] Add/remove IGDB entries from all games at once
 - [x] IGDB API integration for game data
 - [x] Loads data one time and passes to other pages
-- [x] Optimization: Lazy loading images
+- [x] Optimization: Lazy loading images (on Cards and Workspace Icons only)
 
 Extras
 
