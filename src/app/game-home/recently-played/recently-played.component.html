@@ -5,6 +5,10 @@
       class="card relative cursor-pointer group overflow-hidden"
       *ngFor="let game of recentlyPlayed"
       (click)="viewDetails(game)"
+      (keydown.enter)="viewDetails(game)"
+      (keydown.space)="viewDetails(game)"
+      tabindex="0"
+      role="button"
     >
       <!-- BG CARD IMAGE -->
       <img
