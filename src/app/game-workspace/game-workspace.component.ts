@@ -50,11 +50,11 @@ export class GameWorkspaceComponent implements OnInit {
       );
       if (selectedElement) {
         selectedElement.scrollIntoView({
-          behavior: 'smooth',
-          block: 'nearest',
+          behavior: 'smooth', // smooth | instant
+          block: 'center', // nearest | end | start | center
         });
       }
-    }, 300); // Delay to ensure the DOM is updated
+    }, 100); // Wait for DOM
 
     // Subscribe to changes
     this.gameDataService.selectedGameChanged.subscribe({
