@@ -3,11 +3,12 @@ import { GameCardsComponent } from './game-cards/game-cards.component';
 import { RecentlyPlayedComponent } from './recently-played/recently-played.component';
 import { GameItemInterface } from '../gameItem.interface';
 import { GameDataService } from '../game-data.service';
+import { HeroSectionComponent } from './hero-section/hero-section.component';
 
 @Component({
   selector: 'app-game-home',
   standalone: true,
-  imports: [GameCardsComponent, RecentlyPlayedComponent],
+  imports: [GameCardsComponent, RecentlyPlayedComponent, HeroSectionComponent],
   templateUrl: './game-home.component.html',
   styleUrl: './game-home.component.scss',
 })
