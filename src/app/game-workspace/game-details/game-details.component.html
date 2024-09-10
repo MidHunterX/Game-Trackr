@@ -43,7 +43,7 @@
       </div>
 
       <div
-        *ngIf="playtimeHours !== undefined && playtimeMinutes !== undefined"
+        *ngIf="playtimeHours !== undefined && playtimeMinutes !== undefined && game.playtime !== 0"
         class="flex place-items-center gap-4"
       >
         <fa-icon class="text-2xl text-primary" [icon]="faClock"></fa-icon>
