@@ -3,10 +3,10 @@
 ## ⚡ Features
 
 - [ ] Playnite integration for gameplay analytics
-- [ ] Vimium / Tridactyl / Keyboard friendly navigation.
-- [x] Generate raster gaussian blur for background instead of CSS blur filter (resource intensive)
+- [x] Vimium / Tridactyl / Keyboard friendly navigation.
 - [x] Smartphone / Tablet friendly navigation.
-- [x] Ability to set custom scroll position throughout Game Details navigation.
+- [x] Generate raster gaussian blur for background instead of CSS blur filter (resource intensive)
+- [x] Ability to set custom user scroll position on Game Details throughout sidebar navigation.
 - [x] URLs without id attrib to avoid history spamming (not really needed as data is handed over to next page)
 - [x] Optimization: Data is handed over to routes to avoid data reloading
 - [x] Add/remove IGDB entries from all games at once

@@ -12,7 +12,11 @@
 
 <div class="drawer lg:drawer-open w-full">
   <input id="my-drawer-2" type="checkbox" class="drawer-toggle w-0" />
-  <div class="drawer-content">
+  <div
+    class="drawer-content"
+    style=".element:focus { outline: none; }"
+    tabindex="0"
+  >
     <!-- WORKSPACE CONTENT -->
     <router-outlet></router-outlet>
   </div>
