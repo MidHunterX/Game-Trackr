@@ -89,7 +89,7 @@ def fetch_game_details(title):
     involved_companies.developer, summary, rating, cover.image_id, genres.name,
     themes.name, keywords.name, websites.url, game_engines.name,
     game_modes.name, platforms.name, player_perspectives.name; search
-    "{title}"; limit 8;
+    "{title}"; limit 16;
     """
 
     response = requests.post(igdb_url, headers=headers, data=body)
