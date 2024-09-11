@@ -18,7 +18,7 @@
       type="search"
       list="games"
       placeholder="Search for games..."
-      class="input input-ghost bg-base-100/60 input-bordered w-full"
+      class="input input-bordered w-full rounded-full"
       (change)="onGameSelected($event)" />
     <datalist id="games">
       <option *ngFor="let gameItem of games" [value]="gameItem.name">
