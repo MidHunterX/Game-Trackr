@@ -14,6 +14,7 @@ import { HeroSectionComponent } from './hero-section/hero-section.component';
 })
 export class GameHomeComponent implements OnInit {
   games: GameItemInterface[] = [];
+  mostRecent: GameItemInterface | undefined;
   recentlyPlayed: GameItemInterface[] = [];
   remainingGames: GameItemInterface[] = [];
 
@@ -36,8 +37,9 @@ export class GameHomeComponent implements OnInit {
   }
 
   splitGamesData(): void {
-    this.recentlyPlayed = this.games.slice(0, 2);
-    // this.remainingGames = this.games.slice(2);
-    this.remainingGames = this.games;
+    this.mostRecent = this.games[0];
+    this.recentlyPlayed = this.games.slice(1, 3);
+    this.remainingGames = this.games.slice(3);
+    // this.remainingGames = this.games;
   }
 }
