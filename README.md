@@ -1,4 +1,6 @@
-# Game Completion Tracker
+# Gamer Vault
+
+A safe place to store details of the collection of games that that I have played in my lifetime.
 
 ## 🍳 Made with
 
@@ -75,6 +77,7 @@ Step 4: Profit?
 | DaisyUI              | Tailwind Component Library   |
 | angular-fontawesome  | Font Awesome for Angular     |
 | free-solid-svg-icons | Solid Icons for Font Awesome |
+| angular-cli-ghpages  | Angular CI/CD Deploy Script  |
 
 ## Personal Note
 
