@@ -1,4 +1,6 @@
-# Game Completion Tracker
+# Gamer Vault
+
+A safe place to store details of the collection of games that that I have played in my lifetime.
 
 ## 🍳 Made with
 
@@ -37,7 +39,7 @@ Step 1: Clone the project, cd into it and install dependencies
 Using **HTTPS**:
 
 ```bash
-git clone https://github.com/MidHunterX/Game-Completion-Tracker.git
+git clone https://github.com/MidHunterX/Gamer-Vault.git
 cd Game-Completion-Tracker
 npm install
 ```
@@ -45,7 +47,8 @@ npm install
 Using **SSH** (Personal):
 
 ```bash
-git clone git@github.com:MidHunterX/Game-Completion-Tracker.git
+
+git clone git@github.com:MidHunterX/Gamer-Vault.git
 cd Game-Completion-Tracker
 npm install
 ```
@@ -75,6 +78,7 @@ Step 4: Profit?
 | DaisyUI              | Tailwind Component Library   |
 | angular-fontawesome  | Font Awesome for Angular     |
 | free-solid-svg-icons | Solid Icons for Font Awesome |
+| angular-cli-ghpages  | Angular CI/CD Deploy Script  |
 
 ## Personal Note
 
@@ -166,4 +170,10 @@ import { CommonModule } from "@angular/common";
 <tag *ngFor="let item of items">
   <text>{{ item.name }}</text>
 </tag>
+```
+
+Deploying:
+
+```
+ng deploy --repo=git@github.com:MidHunterX/Gamer-Vault.git
 ```
