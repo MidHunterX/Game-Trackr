@@ -39,7 +39,7 @@ Step 1: Clone the project, cd into it and install dependencies
 Using **HTTPS**:
 
 ```bash
-git clone https://github.com/MidHunterX/Game-Completion-Tracker.git
+git clone https://github.com/MidHunterX/Gamer-Vault.git
 cd Game-Completion-Tracker
 npm install
 ```
@@ -47,7 +47,8 @@ npm install
 Using **SSH** (Personal):
 
 ```bash
-git clone git@github.com:MidHunterX/Game-Completion-Tracker.git
+
+git clone git@github.com:MidHunterX/Gamer-Vault.git
 cd Game-Completion-Tracker
 npm install
 ```
@@ -169,4 +170,10 @@ import { CommonModule } from "@angular/common";
 <tag *ngFor="let item of items">
   <text>{{ item.name }}</text>
 </tag>
+```
+
+Deploying:
+
+```
+ng deploy --repo=git@github.com:MidHunterX/Gamer-Vault.git
 ```
