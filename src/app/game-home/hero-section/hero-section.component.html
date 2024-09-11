@@ -1,35 +1,72 @@
-<section class="hero overflow-hidden h-[80vh]">
-  <!--
-  <video class="overflow-hidden object-cover" autoplay muted loop id="myVideo">
-    <source src="/public/video/hero.mp4" type="video/mp4">
-  </video>
-  -->
 
-  <div class="container">
-    <h1 class="ms-[-5px] text-8xl font-extrabold">Greetings</h1>
-    <p class="text-3xl font-bold">Fellow Traveller</p>
-    <p class="text-lg max-w-2xl py-6 text-justify">
-      Feel free to browse through my collection of PC games those I have
-      conquered and those I’ve journeyed through. Simply scroll down to explore
-      them all, and select a Game Card to uncover more secrets. Good fortune on
-      your quest!
-    </p>
+<section
+  *ngIf="mostRecent"
+  class="hero relative h-screen lg:h-[75vh]"
+>
+  <!-- BG-BLUR -->
+  <img
+    *ngIf="mostRecent"
+    [src]="'public/blur/' + mostRecent.img + '.jpg'"
+    class="absolute top-0 left-0 w-screen h-screen object-cover opacity-30"
+    style="mask-image: linear-gradient(to bottom, black 50%, transparent)"
+  />
 
-    <article *ngIf="games">
-      <!-- AUTOCOMPLETION INPUT -->
-      <!-- HACK: option value is game.name instead of reliable game.id due to better UX -->
-      <input
-        type="search"
-        list="games"
-        placeholder="Search for games..."
-        class="input input-bordered input-success w-full max-w-sm"
-        (change)="onGameSelected($event)"
+  <!-- AUTOCOMPLETION INPUT -->
+  <article *ngIf="games" class="absolute top-5 w-full max-w-2xl">
+    <!-- HACK: option value is game.name instead of reliable game.id due to better UX -->
+    <input
+      type="search"
+      list="games"
+      placeholder="Search for games..."
+      class="input input-ghost bg-base-100/60 input-bordered w-full"
+      (change)="onGameSelected($event)" />
+    <datalist id="games">
+      <option *ngFor="let gameItem of games" [value]="gameItem.name">
+        {{ gameItem.name }}
+      </option>
+    </datalist>
+  </article>
+
+  <div class="container grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8">
+    <!-- RECENT IMAGE -->
+    <article class="card relative cursor-pointer group overflow-hidden">
+      <img
+        class="object-cover rounded-lg transition duration-500 hover:scale-105"
+        [src]="'public/banner/' + mostRecent.img + '.jpg'"
+        alt="{{ mostRecent.name }}"
+        width="1280"
+        height="720"
       />
-      <datalist id="games">
-        <option *ngFor="let gameItem of games" [value]="gameItem.name">
-          {{ gameItem.name }}
-        </option>
-      </datalist>
+    </article>
+    <!-- RECENT DETAILS -->
+    <article class="z-10">
+      <div class="badge badge-outline">Most Recently Completed</div>
+      <h1>{{ mostRecent.name }}</h1>
+      <p class="text-lg font-bold">{{ mostRecent.year }}</p>
+      <div *ngIf="starRating" class="rating flex items-center">
+        <p class="text-xl my-0 font-bold pe-4">Rating:</p>
+        <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" [checked]="starRating >= 1" disabled />
+        <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" [checked]="starRating >= 2" disabled />
+        <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" [checked]="starRating >= 3" disabled />
+        <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" [checked]="starRating >= 4" disabled />
+        <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" [checked]="starRating >= 5" disabled />
+        <p class="text-xl my-0 font-bold pe-4"></p>
+      </div>
+      <p class="text-lg max-w-2xl my-4 text-justify line-clamp-3 lg:line-clamp-5">
+        {{ mostRecent.description }}
+      </p>
+      <button
+        type="button"
+        (click)="viewDetails(mostRecent)"
+        class="btn btn-primary">
+        View More Details
+      </button>
     </article>
   </div>
+
+  <p class="absolute lg:hidden opacity-50 bottom-0 text-center px-6">
+    Feel free to browse through my collection of PC games those I have conquered
+    and those I’ve journeyed through. Simply scroll down to explore them all,
+    and select a Game Card to uncover more secrets. Good fortune on your quest!
+  </p>
 </section>
