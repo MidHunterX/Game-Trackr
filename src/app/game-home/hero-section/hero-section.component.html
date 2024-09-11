@@ -1,11 +1,18 @@
-<section class="hero min-h-[80vh]">
+<section class="hero overflow-hidden h-[80vh]">
+  <!--
+  <video class="overflow-hidden object-cover" autoplay muted loop id="myVideo">
+    <source src="/public/video/hero.mp4" type="video/mp4">
+  </video>
+  -->
+
   <div class="container">
-    <h1 class="text-8xl font-bold">Greetings</h1>
+    <h1 class="ms-[-5px] text-8xl font-extrabold">Greetings</h1>
     <p class="text-3xl font-bold">Fellow Traveller</p>
     <p class="text-lg max-w-2xl py-6 text-justify">
-      Scroll down to browse through all PC games that I have Played or
-      Completed. <br />
-      Select a Game Card to view more details. Good luck.
+      Feel free to browse through my collection of PC games those I have
+      conquered and those I’ve journeyed through. Simply scroll down to explore
+      them all, and select a Game Card to uncover more secrets. Good fortune on
+      your quest!
     </p>
 
     <article *ngIf="games">
@@ -15,7 +22,7 @@
         type="search"
         list="games"
         placeholder="Search for games..."
-        class="input input-bordered w-full max-w-xs"
+        class="input input-bordered input-success w-full max-w-sm"
         (change)="onGameSelected($event)"
       />
       <datalist id="games">
