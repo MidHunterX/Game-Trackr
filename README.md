@@ -1,5 +1,16 @@
 # Game Completion Tracker
 
+## 🍳 Made with
+
+<span>
+  <img width=64 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg" /> &nbsp;
+  <img width=64 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" /> &nbsp;
+  <img width=64 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" /> &nbsp;
+  <img width=64 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" /> &nbsp;
+  <img width=64 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" /> &nbsp;
+  <img width=64 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg" />
+</span>
+
 ## ⚡ Features
 
 - [ ] Playnite integration for gameplay analytics
@@ -12,7 +23,7 @@
 - [x] Add/remove IGDB entries from all games at once
 - [x] IGDB API integration for game data
 - [x] Loads data one time and passes to other pages
-- [x] Optimization: Lazy loading images
+- [x] Optimization: Lazy loading images (on Cards and Workspace Icons only)
 
 Extras
 

@@ -7,11 +7,12 @@ import { GameDataService } from '../game-data.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faBars, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { ElementRef, ViewChild } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-game-workspace',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, FontAwesomeModule],
+  imports: [CommonModule, RouterOutlet, FontAwesomeModule, NgOptimizedImage],
   templateUrl: './game-workspace.component.html',
   styleUrl: './game-workspace.component.scss',
 })
