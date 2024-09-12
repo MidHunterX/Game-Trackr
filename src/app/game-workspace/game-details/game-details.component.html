@@ -13,7 +13,7 @@
     />
     <!-- HEADER DETAILS -->
     <article class="px-4 md:absolute bottom-0 w-full flex justify-between">
-      <div class="content-end">
+      <div class="content-end text-center sm:text-left w-fit mx-auto sm:mx-0">
         <h1 class="text-4xl lg:text-5xl xl:text-6xl">{{ game.name }}</h1>
       </div>
       <img
@@ -29,9 +29,9 @@
   </header>
 
   <!-- GAME STATISTICS -->
-  <section id="game-stats" class="px-4">
+  <section id="game-stats" class="px-4 text-center sm:text-left w-fit mx-auto sm:mx-0">
     <article class="grid grid-cols-3 w-fit gap-8 my-8">
-      <div class="flex place-items-center gap-4">
+      <div class="flex flex-col sm:flex-row place-items-center gap-4">
         <fa-icon class="text-2xl text-primary" [icon]="faCalendar"></fa-icon>
         <div>
           <div class="text-md font-semibold text-gray-600 dark:text-gray-400">
@@ -44,7 +44,7 @@
 
       <div
         *ngIf="playtimeHours !== undefined && playtimeMinutes !== undefined && game.playtime !== 0"
-        class="flex place-items-center gap-4"
+        class="flex flex-col sm:flex-row place-items-center gap-4"
       >
         <fa-icon class="text-2xl text-primary" [icon]="faClock"></fa-icon>
         <div>
@@ -61,7 +61,7 @@
         </div>
       </div>
 
-      <div class="flex place-items-center gap-4">
+      <div class="flex flex-col sm:flex-row place-items-center gap-4">
         <fa-icon class="text-2xl text-primary" [icon]="faStar"></fa-icon>
         <div>
           <div class="text-md font-semibold text-gray-600 dark:text-gray-400">
