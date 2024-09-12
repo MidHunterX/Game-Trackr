@@ -2,12 +2,13 @@
 <img *ngIf="game" [src]="'public/blur/' + game.img + '.jpg'" class="fixed top-0 left-0 h-screen min-w-full object-cover opacity-30 dark:opacity-40" alt=""/>
 
 <!-- NAVBAR FOR MOBILE -->
-<nav class="navbar sticky lg:hidden bg-base-300 w-full">
-  <div class="flex-none lg:hidden">
-    <label for="my-drawer-2" class="btn btn-square btn-ghost drawer-button lg:hidden">
-      <fa-icon class="text-2xl text-primary" [icon]="faBars"></fa-icon>
-    </label>
-  </div>
+<nav class="absolute top-2 left-2 z-10 lg:hidden">
+  <label
+    for="my-drawer-2"
+    (click)="scrollToSelectedGame()"
+    class="btn btn-square drawer-button lg:hidden">
+    <fa-icon class="text-2xl text-primary" [icon]="faBars"></fa-icon>
+  </label>
 </nav>
 
 <div class="drawer lg:drawer-open w-full">
@@ -43,7 +44,7 @@
           (click)="viewDetails(gameItem)"
           [id]="game.id === gameItem.id ? 'selected-game' : null"
           [ngClass]="{'bg-neutral-500/40 hover:bg-neutral-500/40': game.id === gameItem.id}"
-          class="text-lg truncate py-3 px-8">
+          class="text-lg truncate py-3 px-8 hover:bg-base-100/20">
           <img
             class="object-contain w-8 rounded-lg font-black truncate"
             loading="lazy"
@@ -52,7 +53,11 @@
             height="64"
             width="64"
           />
-          <span>{{ gameItem.name }}</span>
+          <!-- Mobile Exclusive Autohide Drawer on Name Click -->
+          <label for="my-drawer-2" class="block lg:hidden">
+            <span>{{ gameItem.name }}</span>
+          </label>
+          <span class="hidden lg:block">{{ gameItem.name }}</span>
         </a>
       </li>
     </ul>

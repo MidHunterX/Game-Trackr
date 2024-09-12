@@ -43,7 +43,19 @@ export class GameWorkspaceComponent implements OnInit {
         .catch((error) => console.error('Error loading GameData:', error));
     }
 
-    // Scroll to selected game in Sidebar
+    this.scrollToSelectedGame()
+
+    // Subscribe to changes
+    this.gameDataService.selectedGameChanged.subscribe({
+      next: (game: GameItemInterface | undefined) => {
+        this.game = game;
+      },
+      error: (err) => console.error('Error loading game:', err),
+    });
+  }
+
+  // Scroll to selected game in Sidebar
+  scrollToSelectedGame(): void {
     setTimeout(() => {
       const selectedElement = document.getElementById('selected-game');
       console.log(
@@ -57,14 +69,6 @@ export class GameWorkspaceComponent implements OnInit {
         });
       }
     }, 100); // Wait for DOM
-
-    // Subscribe to changes
-    this.gameDataService.selectedGameChanged.subscribe({
-      next: (game: GameItemInterface | undefined) => {
-        this.game = game;
-      },
-      error: (err) => console.error('Error loading game:', err),
-    });
   }
 
   viewDetails(game: GameItemInterface): void {
