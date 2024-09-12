@@ -175,5 +175,7 @@ import { CommonModule } from "@angular/common";
 Deploying:
 
 ```
-ng deploy --repo=git@github.com:MidHunterX/Gamer-Vault.git
+ng deploy --message="Hello World" --repo=git@github.com:MidHunterX/Gamer-Vault.git --base-href="/Gamer-Vault/"
 ```
+
+> --repo: by default the repository is discovered from the current working directory.
