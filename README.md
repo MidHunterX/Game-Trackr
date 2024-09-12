@@ -1,6 +1,6 @@
-# Gamer Vault
+# Gamer Trackr
 
-A safe place to store details of the collection of games that that I have played in my lifetime.
+A simple frontend to keep track of the library of games that that I have played in my lifetime.
 
 ## 🍳 Made with
 
@@ -16,6 +16,7 @@ A safe place to store details of the collection of games that that I have played
 ## ⚡ Features
 
 - [ ] Playnite integration for gameplay analytics
+- [ ] OpenGraph and Twitter card metadata for social media sharing.
 - [x] Vimium / Tridactyl / Keyboard friendly navigation (ft. tabindex="0")
 - [x] Smartphone / Tablet friendly navigation.
 - [x] Generate raster gaussian blur for background instead of CSS blur filter (resource intensive)
@@ -39,8 +40,8 @@ Step 1: Clone the project, cd into it and install dependencies
 Using **HTTPS**:
 
 ```bash
-git clone https://github.com/MidHunterX/Gamer-Vault.git
-cd Game-Completion-Tracker
+git clone https://github.com/MidHunterX/Game-Trackr.git
+cd Game-Trackr
 npm install
 ```
 
@@ -48,8 +49,8 @@ Using **SSH** (Personal):
 
 ```bash
 
-git clone git@github.com:MidHunterX/Gamer-Vault.git
-cd Game-Completion-Tracker
+git clone git@github.com:MidHunterX/Game-Trackr.git
+cd Game-Trackr
 npm install
 ```
 
@@ -175,7 +176,7 @@ import { CommonModule } from "@angular/common";
 Deploying:
 
 ```
-ng deploy --message="Hello World" --repo=git@github.com:MidHunterX/Gamer-Vault.git --base-href="/Gamer-Vault/"
+ng deploy --message="" --repo=git@github.com:MidHunterX/Game-Trackr.git --base-href="/Game-Trackr/"
 ```
 
 > --repo: by default the repository is discovered from the current working directory.
