@@ -12,7 +12,7 @@
   />
 
   <!-- AUTOCOMPLETION INPUT -->
-  <article *ngIf="games" class="absolute top-5 w-full max-w-2xl">
+  <article *ngIf="games" class="absolute top-5 px-3 w-full max-w-2xl">
     <!-- HACK: option value is game.name instead of reliable game.id due to better UX -->
     <input
       type="search"
@@ -27,7 +27,7 @@
     </datalist>
   </article>
 
-  <div class="container grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8">
+  <div class="container p-4 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8">
     <!-- RECENT IMAGE -->
     <article class="card relative cursor-pointer group overflow-hidden">
       <img
@@ -40,7 +40,7 @@
     </article>
     <!-- RECENT DETAILS -->
     <article class="z-10">
-      <div class="badge badge-outline">Most Recently Completed</div>
+      <div class="badge badge-outline mb-2">Most Recently Completed</div>
       <h1>{{ mostRecent.name }}</h1>
       <p class="text-lg font-bold">{{ mostRecent.year }}</p>
       <div *ngIf="starRating" class="rating flex items-center">
@@ -52,7 +52,7 @@
         <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" [checked]="starRating >= 5" disabled />
         <p class="text-xl my-0 font-bold pe-4"></p>
       </div>
-      <p class="text-lg max-w-2xl my-4 text-justify line-clamp-3 lg:line-clamp-5">
+      <p class="sm:text-lg max-w-2xl my-4 text-justify line-clamp-5">
         {{ mostRecent.description }}
       </p>
       <button
@@ -63,10 +63,4 @@
       </button>
     </article>
   </div>
-
-  <p class="absolute lg:hidden opacity-50 bottom-0 text-center px-6">
-    Feel free to browse through my collection of PC games those I have conquered
-    and those I’ve journeyed through. Simply scroll down to explore them all,
-    and select a Game Card to uncover more secrets. Good fortune on your quest!
-  </p>
 </section>
