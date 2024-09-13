@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+# █░█ ▄▀█ █▀█ █ ▄▀█ █▄▄ █░░ █▀▀ █▀
+# ▀▄▀ █▀█ █▀▄ █ █▀█ █▄█ █▄▄ ██▄ ▄█
+# ================================
+BLK='\033[1;30m' RED='\033[1;31m' GRN='\033[1;32m' YLO='\033[1;33m'
+BLU='\033[1;34m' PNK='\033[1;35m' CYN='\033[1;36m' WHT='\033[1;37m'
+DEF='\033[0;39m' RESET='\033[0;0m'
+U='\033[4m' # Underline
+X=${RESET}
+Y=${YLO}
+R=${RED}
+B=${BLU}
+G=${GRN}
+
+echo
+echo -e "${B}█▀▄ █▀▀ █▀█ █░░ █▀█ █▄█ █ █▄░█ █▀▀   ${X}█▄▄ █░█ █ █░░ █▀▄"
+echo -e "${B}█▄▀ ██▄ █▀▀ █▄▄ █▄█ ░█░ █ █░▀█ █▄█   ${X}█▄█ █▄█ █ █▄▄ █▄▀"
+echo -e "======================================================"
+
+echo "Enter a commit message (press Enter for no message):"
+read commit_message
+
+if [ -z "$commit_message" ]; then
+  ng deploy --repo=git@github.com:MidHunterX/Game-Trackr.git --base-href="/Game-Trackr/"
+else
+  ng deploy --message="$commit_message" --repo=git@github.com:MidHunterX/Game-Trackr.git --base-href="/Game-Trackr/"
+fi
+
+build_status=$?  # Capture exit status
+
+if [ $build_status -eq 0 ]; then
+  echo
+  echo -e "${G}█▀▄ █▀█ █▄░█ █▀▀  █ ${X}"
+  echo -e "${G}█▄▀ █▄█ █░▀█ ██▄  ▄ ${X}"
+else
+  echo
+  echo -e "❌ ${RED}BUILD FAILED${X}"
+fi
