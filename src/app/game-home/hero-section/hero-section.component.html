@@ -35,23 +35,23 @@
 
   <!-- GAME DETAILS -->
   <div class="grid place-items-center h-full">
-  <div class="container mx-auto p-4 grid grid-cols-1 xl:grid-cols-2 gap-4 lg:gap-8">
-    <article class="z-10 p-4 col-span-1 flex flex-col justify-center">
-      <div class="badge badge-outline mb-2 border-2 p-3 font-bold">Most Recently Completed</div>
-      <h1 class="text-6xl xl:text-7xl font-black mb-3">{{ mostRecent.name }}</h1>
-      <p class="text-2xl font-bold">{{ mostRecent.developer }} - {{ mostRecent.year }}</p>
-      <div *ngIf="starRating" class="rating flex items-center">
-        <p class="text-xl my-0 font-bold pe-4">Rating:</p>
-        <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-600 dark:bg-orange-300" [checked]="starRating >= 1" disabled />
-        <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-600 dark:bg-orange-300" [checked]="starRating >= 2" disabled />
-        <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-600 dark:bg-orange-300" [checked]="starRating >= 3" disabled />
-        <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-600 dark:bg-orange-300" [checked]="starRating >= 4" disabled />
-        <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-600 dark:bg-orange-300" [checked]="starRating >= 5" disabled />
-        <p class="text-xl my-0 font-bold pe-4"></p>
-      </div>
-      <p class="sm:text-lg my-4 text-justify line-clamp-5">
-        {{ mostRecent.description }}
-      </p>
+    <div class="container mx-auto p-4 grid grid-cols-1 xl:grid-cols-2 gap-4 lg:gap-8">
+      <article class="z-10 p-4 col-span-1 flex flex-col justify-center">
+        <div class="badge badge-outline mb-2 border-2 p-3 font-bold">Most Recently Completed</div>
+        <h1 class="text-6xl xl:text-7xl font-black mb-3">{{ mostRecent.name }}</h1>
+        <p class="text-2xl font-bold">{{ mostRecent.developer }} - {{ mostRecent.year }}</p>
+        <div *ngIf="starRating" class="rating flex items-center">
+          <p class="text-xl my-0 font-bold pe-4">Rating:</p>
+          <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-600 dark:bg-orange-400" [checked]="starRating >= 1" disabled />
+          <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-600 dark:bg-orange-400" [checked]="starRating >= 2" disabled />
+          <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-600 dark:bg-orange-400" [checked]="starRating >= 3" disabled />
+          <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-600 dark:bg-orange-400" [checked]="starRating >= 4" disabled />
+          <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-600 dark:bg-orange-400" [checked]="starRating >= 5" disabled />
+          <p class="text-xl my-0 font-bold pe-4"></p>
+        </div>
+        <p class="sm:text-lg my-4 text-justify line-clamp-5">
+          {{ mostRecent.description }}
+        </p>
 
         <article class="flex flex-row gap-4">
           <button
@@ -70,8 +70,8 @@
           </button>
         </article>
 
-    </article>
-  </div>
+      </article>
+    </div>
   </div>
 
 </section>
