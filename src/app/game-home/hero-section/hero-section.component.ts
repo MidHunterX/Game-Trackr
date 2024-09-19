@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common'; // *ngFor
 import { GameItemInterface } from '../../gameItem.interface';
 import { Router } from '@angular/router';
 import { GameDataService } from '../../game-data.service';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-hero-section',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FontAwesomeModule],
   templateUrl: './hero-section.component.html',
   styleUrl: './hero-section.component.scss',
 })
@@ -17,6 +19,7 @@ export class HeroSectionComponent implements OnChanges {
   @Input() mostRecent: GameItemInterface | undefined;
 
   starRating: number | undefined;
+  faSearch = faSearch;
 
   calculateStarRating(ratings: number): number {
     return Math.floor((ratings / 100) * 5);
@@ -51,6 +54,15 @@ export class HeroSectionComponent implements OnChanges {
     );
     if (selectedGame) {
       this.viewDetails(selectedGame);
+    }
+  }
+
+  // MOONWALK INTO VIEW
+  scrollToSection(event: Event, sectionId: string): void {
+    event.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
 }
