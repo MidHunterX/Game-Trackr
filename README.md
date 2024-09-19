@@ -6,6 +6,7 @@ A simple frontend to keep track of the library of games that that I have played 
 
 <span>
   <img width=64 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg" /> &nbsp;
+  <img width=64 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" /> &nbsp;
   <img width=64 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" /> &nbsp;
   <img width=64 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" /> &nbsp;
   <img width=64 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" /> &nbsp;
@@ -13,10 +14,12 @@ A simple frontend to keep track of the library of games that that I have played 
   <img width=64 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg" />
 </span>
 
+Design Files: [Game Trackr - Figma](https://www.figma.com/design/8O0MrwPahKFqxLz0STEKD6/Game-Trackr?node-id=0-1&t=TYBgrdCRQ3dTyy1q-1)
+
 ## ⚡ Features
 
 - [ ] Playnite integration for gameplay analytics
-- [ ] OpenGraph and Twitter card metadata for social media sharing.
+- [x] OpenGraph and Twitter card metadata for social media sharing.
 - [x] Vimium / Tridactyl / Keyboard friendly navigation (ft. tabindex="0")
 - [x] Smartphone / Tablet friendly navigation.
 - [x] Generate raster gaussian blur for background instead of CSS blur filter (resource intensive)

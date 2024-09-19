@@ -53,4 +53,13 @@ export class HeroSectionComponent implements OnChanges {
       this.viewDetails(selectedGame);
     }
   }
+
+  // MOONWALK INTO VIEW
+  scrollToSection(event: Event, sectionId: string): void {
+    event.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 }
