@@ -10,26 +10,36 @@
   <div class="hidden xl:block bg-gradient-to-r from-neutral-200 dark:from-neutral-900 to-transparent absolute top-0 left-0 w-[70vw] h-screen"></div>
   <div class="xl:hidden bg-gradient-to-r from-neutral-200 dark:from-neutral-900 to-neutral-200/50 dark:to-neutral-900/50 absolute top-0 left-0 w-screen h-screen"></div>
 
-  <nav class="navbar p-4 place-content-between">
-    <a class="btn btn-ghost text-3xl font-black z-10">
+  <nav class="navbar pt-8 place-content-between">
+    <a class="btn btn-ghost text-3xl text-neutral-100 font-black z-10">
       Game <span class="text-red-600 dark:text-red-400">Trackr</span>
     </a>
 
     <!-- AUTOCOMPLETION INPUT -->
-    <article *ngIf="games" class="flex-1 bg-primary rounded-full max-w-xl z-10">
-      <fa-icon class="text-2xl text-white ps-4 pe-3" [icon]="faSearch"></fa-icon>
+    <article *ngIf="games" class="flex-1 mx-8 rounded-full max-w-xl z-10" data-theme="light">
+      <fa-icon class="text-2xl text-black ps-4 pe-2" [icon]="faSearch"></fa-icon>
       <!-- HACK: option value is game.name instead of reliable game.id due to better UX -->
       <input
         type="search"
         list="games"
         placeholder="Search for games..."
-        class="input input-bordered w-full rounded-e-full"
+        class="input w-full rounded-e-full"
         (change)="onGameSelected($event)" />
       <datalist id="games">
         <option *ngFor="let gameItem of games" [value]="gameItem.name">
           {{ gameItem.name }}
         </option>
       </datalist>
+    </article>
+
+    <article class="card mx-4 hidden lg:block">
+      <button
+        class="btn btn-success"
+        href="#recentlyPlayed"
+        (click)="scrollToSection($event, 'recentlyPlayed')"
+        class="btn w-fit">
+        Explore Games
+      </button>
     </article>
   </nav>
 
@@ -59,14 +69,6 @@
             (click)="viewDetails(mostRecent)"
             class="btn btn-primary w-fit">
             More Details
-          </button>
-
-          <button
-            class="btn btn-success"
-            href="#recentlyPlayed"
-            (click)="scrollToSection($event, 'recentlyPlayed')"
-            class="btn btn-outline w-fit">
-            Explore Games
           </button>
         </article>
 
