@@ -1,5 +1,84 @@
 [
   {
+    "id": 146,
+    "name": "Manhunt",
+    "year": 2003,
+    "developer": "Rockstar North",
+    "description": "Manhunt is a third-person stealth horror game. The game consists of twenty levels, and four bonus levels that can be unlocked; the levels are referred to as \"scenes\". Players survive the Scenes by dispatching enemy gang members known as \"Hunters\", occasionally with firearms but primarily by stealthily executing them in gruesome, over-the-top ways. The player is rated at the end of each level, primarily dependent on the gruesomeness of the killings and the speed of completion, from one (unimpressive) to five (extremely competent) stars. Executions are preferred in order to gain a higher score, thus encouraging players to play as viscerally as possible. The game's locales are full of \"dark spots\" and shadows where the player can hide while being chased by the Hunters; hiding in these dark areas makes the player invisible to opponents.",
+    "website": "http://manhunt.wikia.com/wiki/Manhunt",
+    "game_engines": [
+      "RenderWare"
+    ],
+    "player_modes": [
+      "Single player"
+    ],
+    "platforms": [
+      "PC (Microsoft Windows)",
+      "PlayStation 2",
+      "PlayStation 3",
+      "Xbox",
+      "PlayStation 4"
+    ],
+    "pov": [
+      "Third person"
+    ],
+    "genres": [
+      "Shooter",
+      "Tactical"
+    ],
+    "themes": [
+      "Action",
+      "Horror",
+      "Thriller",
+      "Stealth"
+    ],
+    "keywords": [
+      "violence",
+      "bloody",
+      "extreme",
+      "murder",
+      "death",
+      "gangs",
+      "blackjack",
+      "action-adventure",
+      "steam",
+      "hiding",
+      "artificial intelligence",
+      "crime",
+      "dark humor",
+      "easter egg",
+      "nudity",
+      "darkness",
+      "digital distribution",
+      "extreme violence",
+      "profanity",
+      "save point",
+      "escort mission",
+      "male antagonist",
+      "instant kill",
+      "unreliable narrator",
+      "banned",
+      "sadism",
+      "controversy",
+      "disorientation",
+      "stealth kill",
+      "finishing move",
+      "camouflage",
+      "vigilante",
+      "blamed for real life murders",
+      "ps2 classics",
+      "isolation",
+      "renderware",
+      "killcam",
+      "futuristic game show",
+      "xbox 360 backwards compatibility",
+      "male protagonist"
+    ],
+    "img": "mh",
+    "playtime": 69483,
+    "rating": 78
+  },
+  {
     "id": 145,
     "name": "BioShock 2",
     "year": 2010,
