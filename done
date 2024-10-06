@@ -13,9 +13,58 @@ R=${RED}
 B=${BLU}
 G=${GRN}
 
+
 echo
-echo -e "${B}█▀▄ █▀▀ █▀█ █░░ █▀█ █▄█ █ █▄░█ █▀▀   ${X}█▄▄ █░█ █ █░░ █▀▄"
-echo -e "${B}█▄▀ ██▄ █▀▀ █▄▄ █▄█ ░█░ █ █░▀█ █▄█   ${X}█▄█ █▄█ █ █▄▄ █▄▀"
+echo -e "${R}█▀▀ █░█ █▀▀ █▀▀ █▄▀ █ █▄░█ █▀▀   ${X}▄▀█ █▀ █▀ █▀▀ ▀█▀ █▀"
+echo -e "${R}█▄▄ █▀█ ██▄ █▄▄ █░█ █ █░▀█ █▄█   ${X}█▀█ ▄█ ▄█ ██▄ ░█░ ▄█"
+echo -e "====================================================="
+
+missing_count=0
+missing_files=()
+dirs=("blur" "cover" "icon")
+
+get_filename() {
+  echo "$(basename ${1%.*})"
+}
+
+check_file_existence() {
+  local file="$1"
+  local dir="$2"
+  if [[ ! -f "$dir/$file.jpg" && ! -f "$dir/$file.png" ]]; then
+    return 1
+  fi
+  return 0
+}
+
+for banner_file in public/banner/*; do
+  base_file=$(get_filename "$banner_file")
+  for dir in "${dirs[@]}"; do
+    if ! check_file_existence "$base_file" "public/$dir"; then
+      missing_count=$((missing_count + 1))
+      missing_files+=("${R}$base_file${X} $dir")
+    fi
+  done
+done
+
+
+# Prompt if missing files
+if ((missing_count > 0)); then
+  echo "❌ Missing files($missing_count):"
+  for entry in "${missing_files[@]}"; do
+    echo -e "$entry"
+  done
+  read -p "Continue with the build script? (y/N): " choice
+  if [[ "$choice" != "y" ]]; then
+    echo "Build aborted due to missing files."
+    exit 0
+  fi
+fi
+echo -e "${G}✅ Proceeding to deploy${X}"
+
+
+echo
+echo -e "${Y}█▀▄ █▀▀ █▀█ █░░ █▀█ █▄█ █ █▄░█ █▀▀   ${X}█▄▄ █░█ █ █░░ █▀▄"
+echo -e "${Y}█▄▀ ██▄ █▀▀ █▄▄ █▄█ ░█░ █ █░▀█ █▄█   ${X}█▄█ █▄█ █ █▄▄ █▄▀"
 echo -e "======================================================"
 
 echo "Enter a commit message (press Enter for no message):"
