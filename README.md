@@ -2,6 +2,8 @@
 
 A simple frontend to keep track of the library of games that that I have played in my lifetime.
 
+> To view easteregg: Refresh any game details page once
+
 ## 🍳 Made with
 
 <span>
