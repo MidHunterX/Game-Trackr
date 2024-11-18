@@ -32,6 +32,7 @@ def main():
     img = input(str("Enter cover image filename: "))
 
     game_details = {
+        "id": 0,
         "name": name,
         "year": year,
         "developer": developer,
@@ -45,6 +46,7 @@ def main():
         "themes": themes,
         "keywords": keywords,
         "img": img,
+        "playtime": 0,
         "rating": rating,
     }
 
