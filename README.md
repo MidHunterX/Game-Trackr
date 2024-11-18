@@ -2,6 +2,8 @@
 
 A simple frontend to keep track of the library of games that that I have played in my lifetime.
 
+> To view easteregg: Refresh any game details page once
+
 ## 🍳 Made with
 
 <span>
@@ -18,7 +20,6 @@ Design Files: [Game Trackr - Figma](https://www.figma.com/design/8O0MrwPahKFqxLz
 
 ## ⚡ Features
 
-- [ ] Playnite integration for gameplay analytics
 - [x] OpenGraph and Twitter card metadata for social media sharing.
 - [x] Vimium / Tridactyl / Keyboard friendly navigation (ft. tabindex="0")
 - [x] Smartphone / Tablet friendly navigation.
@@ -30,11 +31,6 @@ Design Files: [Game Trackr - Figma](https://www.figma.com/design/8O0MrwPahKFqxLz
 - [x] IGDB API integration for game data
 - [x] Loads data one time and passes to other pages
 - [x] Optimization: Lazy loading images (on Cards and Workspace Icons only)
-
-Extras
-
-- [ ] Character movement on hero with Spine Animation
-- [ ] Emulation of hero image depth using GSAP
 
 ## 🚀 Quickstart
 

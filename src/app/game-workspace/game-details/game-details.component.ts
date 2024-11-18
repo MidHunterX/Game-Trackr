@@ -65,8 +65,8 @@ export class GameDetailsComponent implements OnInit {
     if (!this.game) {
       // this.router.navigate(['/']);
       this.game = {
-        id: 69,
-        name: 'Game Completion Tracker',
+        id: 0,
+        name: 'Game Trackr',
         year: 2024,
         developer: 'Mid Hunter',
         description:
@@ -79,13 +79,13 @@ export class GameDetailsComponent implements OnInit {
         genres: ['Game Tracking', 'Completion List', 'IGDB'],
         themes: ['Gaming'],
         keywords: [
-          'It',
+          'This',
           'is',
           'my',
-          'first time',
-          'developing',
-          'in',
+          'first',
           'Angular',
+          'project',
+          ':D',
         ],
         img: '+',
         playtime: 22140,
