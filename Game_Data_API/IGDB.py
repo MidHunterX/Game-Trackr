@@ -1,7 +1,8 @@
 import os
+from datetime import datetime
+
 import requests
 from dotenv import load_dotenv
-from datetime import datetime
 
 load_dotenv()  # take environment variables from .env.
 TWITCH_CLIENT_ID = os.getenv("TWITCH_CLIENT_ID")
@@ -9,15 +10,16 @@ TWITCH_CLIENT_SECRET = os.getenv("TWITCH_CLIENT_SECRET")
 ACCESS_TOKEN = os.getenv("ACCESS_TOKEN")
 
 
-def check_if_authenticated():
+def regenerate_access_token():
     # AUTHENTICATING TWITCH APP (TO GET ACCESS_TOKEN)
     # POST REQUEST: https://id.twitch.tv/oauth2/token?client_id=abcdefg12345&client_secret=hijklmn67890&grant_type=client_credentials
     # RESPONSE: { "access_token": "access12345token", "expires_in": 5587808, "token_type": "bearer" }
-    if ACCESS_TOKEN == "":
+    if TWITCH_CLIENT_ID and TWITCH_CLIENT_SECRET:
         response = requests.post(
             f"https://id.twitch.tv/oauth2/token?client_id={TWITCH_CLIENT_ID}&client_secret={TWITCH_CLIENT_SECRET}&grant_type=client_credentials"
         )
         print("RESPONSE: %s" % str(response.json()))
+        print("\nPut this access token in your .env file")
         exit(0)
 
 
@@ -79,8 +81,6 @@ def format_game(game):
 
 
 def fetch_game_details(title):
-    check_if_authenticated()
-
     # FETCHING IGDB GAME DATA (WITH ACCESS TOKEN)
     igdb_url = "https://api.igdb.com/v4/games"
     headers = {"Client-ID": TWITCH_CLIENT_ID, "Authorization": f"Bearer {ACCESS_TOKEN}"}
@@ -147,4 +147,6 @@ def fetch_game_details(title):
     else:
         print(f"Request for {title} failed. Status: {response.status_code}")
         print("Looks like it's time to regenerate your ACCESS_TOKEN")
+        regenerate_access_token()
+
         return ["", "", "", "", "", "", "", "", "", "", "", "", "", ""]
