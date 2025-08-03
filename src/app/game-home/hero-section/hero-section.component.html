@@ -60,7 +60,7 @@
             <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-600 dark:bg-orange-400" [checked]="starRating >= 5" disabled />
             <p class="text-xl my-0 font-bold px-4 invisible md:visible">|</p>
           </article>
-          <article *ngIf="mostRecentPlaytimeMinutes" class="flex">
+          <article *ngIf="mostRecentPlaytimeMinutes || mostRecentPlaytimeHours" class="flex">
             <p class="text-xl my-0 font-bold pe-4">Played time:</p>
             <p *ngIf="mostRecentPlaytimeHours" class="text-xl my-0 font-bold pe-2">{{ mostRecentPlaytimeHours }}h</p>
             <p *ngIf="mostRecentPlaytimeMinutes" class="text-xl my-0 font-bold">{{ mostRecentPlaytimeMinutes }}m</p>
