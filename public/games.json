@@ -1,6 +1,6 @@
 [
   {
-    "id": 150,
+    "id": 151,
     "name": "Assassin's Creed Origins",
     "year": 2017,
     "developer": "Ubisoft Montreal",
@@ -51,7 +51,7 @@
     "rating": 81
   },
   {
-    "id": 149,
+    "id": 150,
     "name": "Assassin's Creed Odyssey",
     "year": 2018,
     "developer": "Ubisoft Qu\u00e9bec",
@@ -76,7 +76,7 @@
     "rating": 81
   },
   {
-    "id": 148,
+    "id": 149,
     "name": "Summertime Saga",
     "year": 2017,
     "developer": "Kompas Productions",
@@ -92,6 +92,45 @@
     "img": "sts",
     "playtime": 228266,
     "rating": 70
+  },
+  {
+    "id": 148,
+    "name": "Lust Shot",
+    "year": 2024,
+    "developer": "entryС",
+    "description": "The main character, Keisuke, wakes up in his home and is going to college. But his normal day is cut short when he is hit by a truck and finds himself in an unfamiliar room. There he is met by a cute girl guide named Midori, who informs him that he has entered purgatory. To get into the isekai, Keisuke needs to win three rounds of Russian roulette, complicated by extra cards. For each game won, Midori rewards him in a specialway. However, in reality, there are secrets behind this world that Keisuke has to unravel. Will you be able to find out the truth and get out of this dangerous game?",
+    "website": "https://store.steampowered.com/app/2975030/?curator_clanid=4777282",
+    "game_engines": ["Unity"],
+    "player_modes": ["Single player"],
+    "platforms": ["PC (Microsoft Windows)"],
+    "pov": ["First person", "Third person"],
+    "genres": ["Action", "Indie", "Strategy"],
+    "themes": ["Adult", "Thriller"],
+    "keywords": [
+      "Action",
+      "Adventure",
+      "Anime",
+      "Dark",
+      "Dystopian",
+      "Emotional",
+      "Hand-drawn",
+      "Hentai",
+      "Linear",
+      "Mature",
+      "Mystery",
+      "Nudity",
+      "Pixel Graphics",
+      "Psychological Horror",
+      "PvE",
+      "Sexual Content",
+      "Single Player",
+      "Story Rich",
+      "Strategy",
+      "Visual Novel"
+    ],
+    "img": "ls",
+    "playtime": 3358,
+    "rating": 68
   },
   {
     "id": 147,
