@@ -1,6 +1,6 @@
 [
   {
-    "id": 149,
+    "id": 150,
     "name": "Assassin's Creed Origins",
     "year": 2017,
     "developer": "Ubisoft Montreal",
@@ -51,7 +51,7 @@
     "rating": 81
   },
   {
-    "id": 148,
+    "id": 149,
     "name": "Assassin's Creed Odyssey",
     "year": 2018,
     "developer": "Ubisoft Qu\u00e9bec",
@@ -74,6 +74,24 @@
     "img": "acodyssey",
     "playtime": 361214,
     "rating": 81
+  },
+  {
+    "id": 148,
+    "name": "Summertime Saga",
+    "year": 2017,
+    "developer": "Kompas Productions",
+    "description": "Summertime Saga is an adult orientated high quality dating sim game, currently in development and funded wholly by Patreon backers.\n\nSet in a small suburban town, a young man just entering college is struck by the death of his father. Mysterious circumstances surrounding the death are only the beginning of his problems as he learns that his father was in debt to a group of shady criminals.\n\nThe game features over 65 characters to meet and interact with, over 30 unique locations, 20+ mini games, with hours of new content being added every update.",
+    "website": "https://summertimesaga.com",
+    "game_engines": ["Ren'Py Visual Novel Engine"],
+    "player_modes": [],
+    "platforms": ["Linux", "Android", "PC (Microsoft Windows)", "Mac"],
+    "pov": ["Bird view / Isometric"],
+    "genres": ["Adventure", "Visual Novel"],
+    "themes": ["Erotic"],
+    "keywords": ["adult"],
+    "img": "sts",
+    "playtime": 228266,
+    "rating": 70
   },
   {
     "id": 147,
