@@ -4,12 +4,13 @@ import { GameItemInterface } from '../../gameItem.interface';
 import { Router } from '@angular/router';
 import { GameDataService } from '../../game-data.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HumanPlaytimePipe } from '../../pipes/human-playtime.pipe';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-hero-section',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule],
+  imports: [CommonModule, FontAwesomeModule, HumanPlaytimePipe],
   templateUrl: './hero-section.component.html',
   styleUrl: './hero-section.component.scss',
 })
@@ -27,24 +28,12 @@ export class HeroSectionComponent implements OnChanges {
     return Math.floor((ratings / 100) * 5);
   }
 
-  calculatePlaytime(playtimeInSeconds: number): void {
-    this.mostRecentPlaytimeHours = Math.floor(playtimeInSeconds / 3600);
-    this.mostRecentPlaytimeMinutes = Math.floor((playtimeInSeconds % 3600) / 60);
-  }
-
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['mostRecent'] && this.mostRecent?.rating) {
       this.starRating = this.calculateStarRating(this.mostRecent.rating);
       console.log('Star Rating Updated:', this.starRating);
     } else {
       console.log('No rating available');
-    }
-
-    if (changes['mostRecent'] && this.mostRecent?.playtime) {
-      this.calculatePlaytime(this.mostRecent.playtime);
-      console.log('Playtime Updated:', this.mostRecentPlaytimeHours, 'h ', this.mostRecentPlaytimeMinutes, 'm');
-    } else {
-      console.log('No playtime available');
     }
   }
 

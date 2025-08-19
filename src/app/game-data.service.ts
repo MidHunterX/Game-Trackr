@@ -36,9 +36,4 @@ export class GameDataService {
   getSelectedGame(): GameItemInterface | undefined {
     return this.selectedGameSubject.getValue();
   }
-
-  // FOR DUMMY TESTING
-  isDevelopment(): boolean {
-    return false;
-  }
 }

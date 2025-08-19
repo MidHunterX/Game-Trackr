@@ -42,10 +42,7 @@
         </div>
       </div>
 
-      <div
-        *ngIf="playtimeHours !== undefined && playtimeMinutes !== undefined && game.playtime !== 0"
-        class="flex flex-col sm:flex-row place-items-center gap-4"
-      >
+      <div class="flex flex-col sm:flex-row place-items-center gap-4">
         <fa-icon class="text-2xl text-primary" [icon]="faClock"></fa-icon>
         <div>
           <div class="text-md font-semibold text-gray-600 dark:text-gray-400">
@@ -53,7 +50,7 @@
           </div>
           <div
             class="text-2xl font-black">
-            {{ playtimeHours }}h {{ playtimeMinutes }}m
+            {{ game?.playtime | humanPlaytime }}
           </div>
           <div class="text-sm text-gray-600 dark:text-gray-400">
             ({{ game.playtime }} Seconds)

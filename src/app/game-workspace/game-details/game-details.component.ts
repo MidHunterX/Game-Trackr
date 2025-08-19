@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { GameItemInterface } from '../../gameItem.interface';
 import { GameDataService } from '../../game-data.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HumanPlaytimePipe } from '../../pipes/human-playtime.pipe';
 import {
   faClock,
   faStar,
@@ -20,7 +21,7 @@ import {
 @Component({
   selector: 'app-game-details',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule],
+  imports: [CommonModule, FontAwesomeModule, HumanPlaytimePipe],
   templateUrl: './game-details.component.html',
   styleUrl: './game-details.component.scss',
 })
@@ -53,10 +54,6 @@ export class GameDetailsComponent implements OnInit {
     this.gameDataService.selectedGameChanged.subscribe({
       next: (game: GameItemInterface | undefined) => {
         this.game = game;
-        if (this.game && this.game.playtime) {
-          console.log('log: Calculating time: ' + this.game.playtime);
-          this.calculatePlaytime(this.game.playtime);
-        }
       },
       error: (err) => console.error('Error loading game:', err),
     });
@@ -85,15 +82,5 @@ export class GameDetailsComponent implements OnInit {
       };
       this.gameDataService.setSelectedGame(this.game);
     }
-
-    if (this.game && this.game.playtime) {
-      console.log('log: Calculating time: ' + this.game.playtime);
-      this.calculatePlaytime(this.game.playtime);
-    }
-  }
-
-  calculatePlaytime(playtimeInSeconds: number): void {
-    this.playtimeHours = Math.floor(playtimeInSeconds / 3600);
-    this.playtimeMinutes = Math.floor((playtimeInSeconds % 3600) / 60);
   }
 }
