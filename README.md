@@ -1,6 +1,6 @@
 # Gamer Trackr
 
-A simple frontend to keep track of the library of games that that I have played in my lifetime.
+A full on Angular revamp of my very first web development project [Played Games List](https://midhunterx.github.io/Played-Games-List/) to keep track of the library of games that that I have played in my lifetime.
 
 > To view easteregg: Refresh any game details page once
 
@@ -16,12 +16,12 @@ A simple frontend to keep track of the library of games that that I have played 
   <img width=64 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg" />
 </span>
 
-Design Files: [Game Trackr - Figma](https://www.figma.com/design/8O0MrwPahKFqxLz0STEKD6/Game-Trackr?node-id=0-1&t=TYBgrdCRQ3dTyy1q-1)
+📄 Design File: [Game Trackr - Figma](https://www.figma.com/design/8O0MrwPahKFqxLz0STEKD6/Game-Trackr?node-id=0-1&t=TYBgrdCRQ3dTyy1q-1)
 
 ## ⚡ Features
 
 - [x] OpenGraph and Twitter card metadata for social media sharing.
-- [x] Vimium / Tridactyl / Keyboard friendly navigation (ft. tabindex="0")
+- [x] Vimium / Tridactyl / Keyboard friendly navigation
 - [x] Smartphone / Tablet friendly navigation.
 - [x] Generate raster gaussian blur for background instead of CSS blur filter (resource intensive)
 - [x] Ability to set custom user scroll position on Game Details throughout sidebar navigation.
@@ -35,16 +35,6 @@ Design Files: [Game Trackr - Figma](https://www.figma.com/design/8O0MrwPahKFqxLz
 ## 🚀 Quickstart
 
 Step 1: Clone the project, cd into it and install dependencies
-
-Using **HTTPS**:
-
-```bash
-git clone https://github.com/MidHunterX/Game-Trackr.git
-cd Game-Trackr
-npm install
-```
-
-Using **SSH** (Personal):
 
 ```bash
 
