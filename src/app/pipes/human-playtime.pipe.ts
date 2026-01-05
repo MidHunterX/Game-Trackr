@@ -10,6 +10,9 @@ export class HumanPlaytimePipe implements PipeTransform {
 
     const hours = Math.floor(value / 3600);
     const minutes = Math.floor((value % 3600) / 60);
-    return `${hours}h ${minutes}m`;
+    var timeString = '';
+    if (hours > 0) timeString += `${hours}h `;
+    if (minutes > 0) timeString += `${minutes}m`;
+    return timeString;
   }
 }
