@@ -42,7 +42,7 @@
         </div>
       </div>
 
-      <div class="flex flex-col sm:flex-row place-items-center gap-4">
+      <div *ngIf="game.playtime" class="flex flex-col sm:flex-row place-items-center gap-4">
         <fa-icon class="text-2xl text-primary" [icon]="faClock"></fa-icon>
         <div>
           <div class="text-md font-semibold text-gray-600 dark:text-gray-400">
@@ -58,7 +58,7 @@
         </div>
       </div>
 
-      <div class="flex flex-col sm:flex-row place-items-center gap-4">
+      <div *ngIf="game.rating" class="flex flex-col sm:flex-row place-items-center gap-4">
         <fa-icon class="text-2xl text-primary" [icon]="faStar"></fa-icon>
         <div>
           <div class="text-md font-semibold text-gray-600 dark:text-gray-400">
