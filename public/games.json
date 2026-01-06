@@ -1,5 +1,28 @@
 [
   {
+    "id": 152,
+    "name": "Touhou Dystopian",
+    "year": 2025,
+    "developer": "Kay Lnk",
+    "description": "Touhou Project's Brand New Action Roguelite Fan Game! Strange incidents erupt in the Animal Realm and Primate Spirit Garden. Embark on an unknown journey, uncover the truth behind the anomalies, and break through this 'Touhou Dystopian'!",
+    "website": "https://store.steampowered.com/app/3265060/__Touhou_Dystopian/",
+    "game_engines": ["Unity"],
+    "player_modes": ["Single player"],
+    "platforms": ["PC (Microsoft Windows)"],
+    "pov": ["Third person"],
+    "genres": [
+      "Role-playing (RPG)",
+      "Hack and slash/Beat 'em up",
+      "Adventure",
+      "Indie"
+    ],
+    "themes": ["Action"],
+    "keywords": ["touhou fangame", "action roguelike"],
+    "img": "td",
+    "playtime": 23224,
+    "rating": 0
+  },
+  {
     "id": 151,
     "name": "Assassin's Creed Origins",
     "year": 2017,
