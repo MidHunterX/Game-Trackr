@@ -1,8 +1,9 @@
 <section id="gameCards" class="p-2 sm:p-8" class="container mx-auto pb-8 px-2">
   <h2 class="font-black my-8">More Games</h2>
   <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 md:gap-4 lg:gap-8">
+    <!-- remainingGames to filteredGames -->
     <article
-      *ngFor="let game of remainingGames"
+      *ngFor="let game of filteredGames"
       class="card relative cursor-pointer overflow-hidden sm:rounded-xl"
       (click)="viewDetails(game)"
       (keydown.enter)="viewDetails(game)"
@@ -20,5 +21,25 @@
         alt="{{ game.name }}"
       />
     </article>
+  </div>
+
+  <!-- TOGGLE CENSORSHIP BUTTON AT THE END -->
+  <div
+    class="bg-base-300 px-6 py-2  mt-8 rounded-lg flex justify-between items-center border-x-4"
+    [ngClass]="isCensored ? 'border-primary' : 'border-error'"
+  >
+    <h3 class="font-bold">
+      Content Filter is
+      <span [ngClass]="isCensored ? 'text-primary' : 'text-error'">
+      {{ isCensored ? 'Active' : 'Inactive' }}
+      </span>
+    </h3>
+    <p class="text-sm opacity-70">NSFW/Mature themes are filtered by default.</p>
+    <button
+      (click)="toggleCensorship()"
+      [ngClass]="isCensored ? 'btn btn-outline btn-warning' : 'btn btn-outline btn-error'"
+    >
+      {{ isCensored ? '⚠️ &nbsp; Show Unsafe Content' : '🔴 &nbsp; Hide Unsafe Content' }}
+    </button>
   </div>
 </section>

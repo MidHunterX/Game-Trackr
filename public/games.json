@@ -953,7 +953,7 @@
     "platforms": ["PC (Microsoft Windows)"],
     "pov": [],
     "genres": ["Simulator"],
-    "themes": [],
+    "themes": ["Erotic"],
     "keywords": [],
     "img": "sob",
     "playtime": 18418,
@@ -1178,7 +1178,7 @@
     "platforms": ["Linux", "PC (Microsoft Windows)", "Nintendo Switch"],
     "pov": [],
     "genres": ["Hardcore", "Visual Novel"],
-    "themes": ["Horror"],
+    "themes": ["Horror", "Sexual Content"],
     "keywords": [
       "Male Protagonist",
       "Branching Plot",
@@ -1224,6 +1224,7 @@
     "genres": ["Action", "Visual Novel"],
     "themes": [
       "Antihero Protagonist",
+      "Sexual Content",
       "Completion Status Indicator",
       "Fighting Protagonist",
       "Gore",
@@ -1712,7 +1713,7 @@
     "platforms": [],
     "pov": ["Side view"],
     "genres": [],
-    "themes": [],
+    "themes": ["Sexual Content"],
     "keywords": [
       "Animated",
       "Female protagonist",

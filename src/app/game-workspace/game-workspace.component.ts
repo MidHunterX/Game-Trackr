@@ -23,6 +23,10 @@ export class GameWorkspaceComponent implements OnInit {
   games: GameItemInterface[] = [];
   game: GameItemInterface | undefined;
 
+  // Censorship
+  filteredSidebarGames: GameItemInterface[] = [];
+  isCensored: boolean = true;
+
   @ViewChild('sidebarContainer') sidebarContainer!: ElementRef;
 
   constructor(
@@ -43,7 +47,13 @@ export class GameWorkspaceComponent implements OnInit {
         .catch((error) => console.error('Error loading GameData:', error));
     }
 
-    this.scrollToSelectedGame()
+    // Subscribe to censorship state
+    this.gameDataService.isCensored$.subscribe((val) => {
+      this.isCensored = val;
+      this.updateSidebarList();
+    });
+
+    this.scrollToSelectedGame();
 
     // Subscribe to changes
     this.gameDataService.selectedGameChanged.subscribe({
@@ -75,5 +85,15 @@ export class GameWorkspaceComponent implements OnInit {
     this.gameDataService.setSelectedGame(game);
     console.log('log: Sending data to /game-details: ' + game);
     // this.router.navigate(['workspace/game-details']);
+  }
+
+  updateSidebarList() {
+    if (this.isCensored) {
+      this.filteredSidebarGames = this.games.filter(
+        (g) => !this.gameDataService.isNSFW(g),
+      );
+    } else {
+      this.filteredSidebarGames = [...this.games];
+    }
   }
 }

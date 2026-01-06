@@ -8,6 +8,19 @@ import { GameItemInterface } from './gameItem.interface';
 export class GameDataService {
   constructor() {}
 
+  // CENSORSHIP
+  private isCensoredSubject = new BehaviorSubject<boolean>(true);
+  isCensored$ = this.isCensoredSubject.asObservable();
+
+  private nsfwThemes = ['Erotic', 'Adult', 'Nudity', 'Sexual Content'];
+
+  toggleCensorship(): void {
+    this.isCensoredSubject.next(!this.isCensoredSubject.value);
+  }
+  isNSFW(game: GameItemInterface): boolean {
+    return game.themes.some((theme) => this.nsfwThemes.includes(theme));
+  }
+
   // FOR HOME ROUTE
   private gamesData: GameItemInterface[] = [];
 
