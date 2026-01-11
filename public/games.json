@@ -1,6 +1,6 @@
 [
   {
-    "id": 152,
+    "id": 151,
     "name": "Touhou Dystopian",
     "year": 2025,
     "developer": "Kay Lnk",
@@ -23,7 +23,7 @@
     "rating": 0
   },
   {
-    "id": 151,
+    "id": 150,
     "name": "Assassin's Creed Origins",
     "year": 2017,
     "developer": "Ubisoft Montreal",
@@ -74,7 +74,7 @@
     "rating": 81
   },
   {
-    "id": 150,
+    "id": 149,
     "name": "Assassin's Creed Odyssey",
     "year": 2018,
     "developer": "Ubisoft Qu\u00e9bec",
@@ -99,7 +99,7 @@
     "rating": 81
   },
   {
-    "id": 149,
+    "id": 148,
     "name": "Summertime Saga",
     "year": 2017,
     "developer": "Kompas Productions",
@@ -117,7 +117,7 @@
     "rating": 70
   },
   {
-    "id": 148,
+    "id": 147,
     "name": "Lust Shot",
     "year": 2024,
     "developer": "entryС",
@@ -156,7 +156,7 @@
     "rating": 68
   },
   {
-    "id": 147,
+    "id": 146,
     "name": "Manhunt",
     "year": 2003,
     "developer": "Rockstar North",
@@ -221,7 +221,7 @@
     "rating": 78
   },
   {
-    "id": 146,
+    "id": 145,
     "name": "BioShock 2",
     "year": 2010,
     "developer": "2K Marin",
@@ -420,7 +420,7 @@
     "rating": 80
   },
   {
-    "id": 145,
+    "id": 144,
     "name": "The Witcher 2: Assassins of Kings",
     "year": 2011,
     "developer": "CD Projekt RED",
@@ -485,7 +485,7 @@
     "rating": 85
   },
   {
-    "id": 144,
+    "id": 143,
     "name": "The Witcher",
     "year": 2007,
     "developer": "CD Projekt RED",
@@ -581,7 +581,7 @@
     "rating": 82
   },
   {
-    "id": 143,
+    "id": 142,
     "name": "BioShock",
     "year": 2007,
     "developer": "2K Australia",
@@ -827,7 +827,7 @@
     "rating": 86
   },
   {
-    "id": 142,
+    "id": 141,
     "name": "Need for Speed: Rivals",
     "year": 2013,
     "developer": "Criterion Games",
@@ -864,7 +864,7 @@
     "rating": 88
   },
   {
-    "id": 141,
+    "id": 140,
     "name": "Dead End Aegis",
     "year": 2022,
     "developer": "metalogiq",
@@ -882,7 +882,7 @@
     "rating": 80
   },
   {
-    "id": 140,
+    "id": 139,
     "name": "Mortal Kombat X",
     "year": 2015,
     "developer": "NetherRealm Studios",
@@ -942,7 +942,7 @@
     "rating": 80
   },
   {
-    "id": 139,
+    "id": 138,
     "name": "Seduction of Beauty",
     "year": 2024,
     "developer": "",
@@ -960,7 +960,7 @@
     "rating": 60
   },
   {
-    "id": 138,
+    "id": 137,
     "name": "Grand Theft Auto IV: The Ballad of Gay Tony",
     "year": 2009,
     "developer": "Rockstar North",
@@ -986,7 +986,7 @@
     "rating": 80
   },
   {
-    "id": 137,
+    "id": 136,
     "name": "Grand Theft Auto IV: The Lost and Damned",
     "year": 2009,
     "developer": "Rockstar North",
@@ -1016,7 +1016,7 @@
     "rating": 80
   },
   {
-    "id": 136,
+    "id": 135,
     "name": "Tom Clancy's Splinter Cell: Blacklist",
     "year": 2013,
     "developer": "Ubisoft Toronto",
@@ -1120,7 +1120,7 @@
     "rating": 82
   },
   {
-    "id": 135,
+    "id": 134,
     "name": "The Coffin of Andy and Leyley",
     "year": 2023,
     "developer": "Nemlei",
@@ -1138,7 +1138,7 @@
     "rating": 81
   },
   {
-    "id": 134,
+    "id": 133,
     "name": "Hatred",
     "year": 2015,
     "developer": "Destructive Creations",
@@ -1167,7 +1167,7 @@
     "rating": 46
   },
   {
-    "id": 133,
+    "id": 132,
     "name": "\u30e6\u30fc\u30d5\u30a9\u30ea\u30a2 (Euphoria)",
     "year": 2011,
     "developer": "CLOCKUP",
@@ -1211,7 +1211,7 @@
     "rating": 0
   },
   {
-    "id": 132,
+    "id": 131,
     "name": "Maggot Baits",
     "year": 2019,
     "developer": "CLOCKUP",
@@ -1256,7 +1256,7 @@
     "rating": 0
   },
   {
-    "id": 131,
+    "id": 130,
     "name": "Far Cry 5",
     "year": 2018,
     "developer": "Ubisoft Montreal",
@@ -1291,7 +1291,7 @@
     "rating": 75
   },
   {
-    "id": 130,
+    "id": 129,
     "name": "Bayonetta 2",
     "year": 2014,
     "developer": "PlatinumGames",
@@ -1339,7 +1339,7 @@
     "rating": 88
   },
   {
-    "id": 129,
+    "id": 128,
     "name": "Bayonetta",
     "year": 2009,
     "developer": "Nex Entertainment",
@@ -1376,7 +1376,7 @@
     "rating": 82
   },
   {
-    "id": 128,
+    "id": 127,
     "name": "Tomb Raider: The Dagger Of Xian",
     "year": 2017,
     "developer": "",
@@ -1394,7 +1394,7 @@
     "rating": 0
   },
   {
-    "id": 127,
+    "id": 126,
     "name": "Assassin's Creed Syndicate",
     "year": 2015,
     "developer": "Ubisoft Qu\u00e9bec",
@@ -1453,7 +1453,7 @@
     "rating": 74
   },
   {
-    "id": 126,
+    "id": 125,
     "name": "Shadow of the Tomb Raider",
     "year": 2018,
     "developer": "Eidos Montr\u00e9al",
@@ -1479,7 +1479,7 @@
     "rating": 77
   },
   {
-    "id": 125,
+    "id": 124,
     "name": "Assassin's Creed Unity",
     "year": 2014,
     "developer": "Ubisoft Montreal",
@@ -1549,7 +1549,7 @@
     "rating": 71
   },
   {
-    "id": 124,
+    "id": 123,
     "name": "Countess in Crimson",
     "year": 2023,
     "developer": "Digital Seductions",
@@ -1567,7 +1567,7 @@
     "rating": 0
   },
   {
-    "id": 123,
+    "id": 122,
     "name": "Doki Doki Literature Club!",
     "year": 2017,
     "developer": "Team Salvato",
@@ -1597,7 +1597,7 @@
     "rating": 82
   },
   {
-    "id": 122,
+    "id": 121,
     "name": "TrackMania Turbo",
     "year": 2016,
     "developer": "Nadeo",
@@ -1627,7 +1627,7 @@
     "rating": 78
   },
   {
-    "id": 121,
+    "id": 120,
     "name": "Our Apartment",
     "year": 2022,
     "developer": "Momoirosoft",
@@ -1641,24 +1641,6 @@
     "themes": ["Erotic"],
     "keywords": ["nudity", "sexual content"],
     "img": "oa",
-    "playtime": 0,
-    "rating": 0
-  },
-  {
-    "id": 120,
-    "name": "Shades Of Sakura 2",
-    "year": 2021,
-    "developer": "",
-    "description": "",
-    "website": "",
-    "game_engines": [],
-    "player_modes": [],
-    "platforms": [],
-    "pov": [],
-    "genres": [],
-    "themes": [],
-    "keywords": [],
-    "img": "ss2vn",
     "playtime": 0,
     "rating": 0
   },
