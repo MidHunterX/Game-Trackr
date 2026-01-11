@@ -16,7 +16,7 @@
     </a>
 
     <!-- AUTOCOMPLETION INPUT -->
-    <article *ngIf="games" class="flex-1 mx-8 rounded-full max-w-xl z-10" data-theme="light">
+    <article *ngIf="games" class="flex-1 mx-4 rounded-full max-w-xl z-10" data-theme="light">
       <fa-icon class="text-2xl text-black ps-4 pe-2" [icon]="faSearch"></fa-icon>
       <!-- HACK: option value is game.name instead of reliable game.id due to better UX -->
       <input
@@ -24,7 +24,8 @@
         list="games"
         placeholder="Search for games..."
         class="input w-full rounded-e-full"
-        (change)="onGameSelected($event)" />
+        (change)="onGameSelected($event)"
+      />
       <datalist id="games">
         <option *ngFor="let gameItem of games" [value]="gameItem.name">
           {{ gameItem.name }}
@@ -75,6 +76,14 @@
             (click)="viewDetails(mostRecent)"
             class="btn btn-primary w-fit">
             More Details
+          </button>
+
+          <button
+            class="btn btn-success"
+            href="#recentlyPlayed"
+            (click)="scrollToSection($event, 'recentlyPlayed')"
+            class="btn btn-outline btn-primary w-fit">
+            Explore Games
           </button>
         </article>
 

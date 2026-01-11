@@ -1,6 +1,6 @@
 <section id="gameCards" class="p-2 sm:p-8" class="container mx-auto pb-8 px-2">
   <h2 class="font-black my-8">More Games</h2>
-  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 md:gap-4 lg:gap-8">
+  <div class="min-h-screen grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 md:gap-4 lg:gap-8">
     <!-- remainingGames to filteredGames -->
     <article
       *ngFor="let game of filteredGames"
@@ -25,16 +25,16 @@
 
   <!-- TOGGLE CENSORSHIP BUTTON AT THE END -->
   <div
-    class="bg-base-300 px-6 py-2  mt-8 rounded-lg flex justify-between items-center border-x-4"
-    [ngClass]="isCensored ? 'border-primary' : 'border-error'"
+    class="px-6 py-2 mt-12 rounded-lg flex flex-col gap-4 lg:flex-row lg:justify-between items-center border-x-4"
+    [ngClass]="isCensored ? 'border-success bg-green-950' : 'border-error bg-red-950'"
   >
     <h3 class="font-bold">
       Content Filter is
-      <span [ngClass]="isCensored ? 'text-primary' : 'text-error'">
+      <span [ngClass]="isCensored ? 'text-success' : 'text-error'">
       {{ isCensored ? 'Active' : 'Inactive' }}
       </span>
     </h3>
-    <p class="text-sm opacity-70">NSFW/Mature themes are filtered by default.</p>
+    <p class="text-sm my-0 opacity-70">{{ isCensored ? 'NSFW/Mature themes are currently filtered' : 'Unsafe content is currently visible' }}</p>
     <button
       (click)="toggleCensorship()"
       [ngClass]="isCensored ? 'btn btn-outline btn-warning' : 'btn btn-outline btn-error'"
