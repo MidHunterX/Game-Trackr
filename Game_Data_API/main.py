@@ -1,5 +1,6 @@
-import os
 import json
+import os
+
 import requests
 from IGDB import fetch_game_details
 
@@ -29,7 +30,7 @@ def main():
     if name == "":
         exit(0)
 
-    img = input(str("Enter cover image filename: "))
+    identifier = input(str("Enter cover image filename: "))
 
     game_details = {
         "id": 0,
@@ -45,14 +46,22 @@ def main():
         "genres": genres,
         "themes": themes,
         "keywords": keywords,
-        "img": img,
+        "img": identifier,
         "playtime": 0,
         "rating": rating,
     }
 
+    save_game_data(game_details, identifier)
+    download_cover_image(cover, identifier)
+
+
+def save_game_data(game_details: dict, filename: str):
+    dir_path = "data"
+    if not os.path.exists(dir_path):
+        os.mkdir(dir_path)
     game_json = json.dumps(game_details, indent=2)
-    print(game_json)
-    download_cover_image(cover, img)
+    with open(f"{dir_path}/{filename}.json", "w", encoding="utf-8") as f:
+        f.write(game_json)
 
 
 def download_cover_image(hash, file_name):
